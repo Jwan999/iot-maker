@@ -63,8 +63,9 @@
         .side-menu .active {
             color: white;
         }
-        .mobile-menu .active{
-            color: white
+
+        .mobile-menu .active {
+            color: #F39E19
         }
 
     </style>
@@ -79,29 +80,29 @@
                        loop autoplay></lottie-player>
     </div>
     {{--mobile navbar--}}
-    <div class="flex flex-row text-white content-mobile fixed m-2 p-4 bg-black opacity-90 rounded">
+    <div class="flex flex-row text-white content-mobile fixed z-10 m-2 p-4 bg-black opacity-90 rounded">
         <div class="flex w-full items-center">
             <div class="w-12 mr-4">
                 <img src="smalllogo.png" alt="">
             </div>
-            <scrollactive class="mobile-menu" active-class="active" :offset="40" :duration="800"
+            <scrollactive class="mobile-menu" active-class="active" :offset="400" :duration="800"
                           bezier-easing-value=".5,0,.35,1">
-                <a href="#offers" class="text-gray-300 mx-3">
+                <a href="#offers" class="scrollactive-item text-gray-300 mx-3">
                     01
                 </a>
-                <a href="#space" class="text-gray-300 mx-3">
+                <a href="#space" class="scrollactive-item text-gray-300 mx-3">
                     02
                 </a>
-                <a href="#partners" class="text-gray-300 mx-3">
+                <a href="#partners" class="scrollactive-item text-gray-300 mx-3">
                     03
                 </a>
-                <a href="#activities" class="text-gray-300 mx-3">
+                <a href="#activities" class="scrollactive-item text-gray-300 mx-3">
                     04
                 </a>
-                <a href="#team" class="text-gray-300 mx-3">
+                <a href="#team" class="scrollactive-item text-gray-300 mx-3">
                     05
                 </a>
-                <a href="#startups" class="text-gray-300 mx-3">
+                <a href="#startups" class="scrollactive-item text-gray-300 mx-3">
                     06
                 </a>
             </scrollactive>
@@ -115,8 +116,6 @@
             <img class="w-32" src="/IoTLogo.png" alt="">
         </div>
         <div class="flex flex-col justify-center text-center text-gray-500 mt-20">
-            {{--todo--}}
-            {{--make active states for each section also add the name of the section when clicked--}}
             <scrollactive class="side-menu flex flex-col" active-class="active" :offset="400" :duration="800"
                           bezier-easing-value=".5,0,.35,1">
                 <a href="#offers"
@@ -264,7 +263,6 @@
                     All about IoT Maker
                 </h1>
             </div>
-            {{--todo center them up and flip the middle image--}}
             <div class="flex flex-col justify-center w-full md:m-4 m-0">
                 <div class="flex md:flex-row flex-col-reverse justify-around md:mx-4 mx-0">
 
@@ -588,18 +586,10 @@
     let vue = new Vue({
         el: '#app',
         data: {
-            activeSection: null,
             isOpen: false,
             projects: false
         },
         methods: {
-            activeOptions() {
-                if (this.activeSection) {
-                    console.log(this.activeSection)
-                    this.$refs[this.activeSection].classList.toggle('text-white')
-                }
-                console.log(this.$refs[this.activeSection])
-            },
             openContact() {
                 this.isOpen = !this.isOpen
             },
@@ -608,12 +598,9 @@
             }
         },
         mounted() {
-            this.activeOptions()
-            // if (window.scrollY > 5000) this.$refs["06"].classList.add('text-white')
 
         },
     })
-    // element.classList.toggle("text-gray-300")
 
 </script>
 
