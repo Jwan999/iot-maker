@@ -60,15 +60,6 @@
             }
         }
 
-        .fade-enter-active, .fade-leave-active {
-            transition: opacity .5s ease-in;
-        }
-
-        .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
-        {
-            opacity: 0;
-        }
-
     </style>
 </head>
 <body class="bg-shade-black relative overflow-x-hidden max-w-full">
@@ -86,24 +77,26 @@
             <div class="w-12 mr-4">
                 <img src="smalllogo.png" alt="">
             </div>
-            <a v-scroll-to="{ el: '.offers', offset: -80}" class="text-white mx-3">
-                01
-            </a>
-            <a v-scroll-to="{ el: '.space', offset: -80}" class="text-white mx-3">
-                02
-            </a>
-            <a v-scroll-to="{ el: '.partners', offset: -80}" class="text-white mx-3">
-                03
-            </a>
-            <a v-scroll-to="{ el: '.activities', offset: -80}" class="text-white mx-3">
-                04
-            </a>
-            <a v-scroll-to="{ el: '.team', offset: -80}" class="text-white mx-3">
-                05
-            </a>
-            <a v-scroll-to="{ el: '.startups', offset: -80}" class="text-white mx-3">
-                06
-            </a>
+            <scrollactive class="mobile-nav">
+                <a href="#offers" class="text-white mx-3">
+                    01
+                </a>
+                <a href="#space" class="text-white mx-3">
+                    02
+                </a>
+                <a href="#partners" class="text-white mx-3">
+                    03
+                </a>
+                <a href="#activities" class="text-white mx-3">
+                    04
+                </a>
+                <a href="#team" class="text-white mx-3">
+                    05
+                </a>
+                <a href="#startups" class="text-white mx-3">
+                    06
+                </a>
+            </scrollactive>
         </div>
 
     </div>
@@ -116,30 +109,25 @@
         <div class="flex flex-col justify-center text-center text-gray-500 mt-20">
             {{--todo--}}
             {{--make active states for each section also add the name of the section when clicked--}}
-            <a id="offers" ref="offers" href="/"
-               v-scroll-to="{ el: '.offers', offset: -20}"
-               class="text-xl m-4 hover:text-white hover:shadow-2xl">01</a>
-            <a id="space" ref="space" href="/"
-               v-scroll-to="{ el: '.space', offset: -20}"
-               class="text-xl m-4 hover:text-white hover:shadow-2xl">02</a>
-            <a id="partners" ref="partners" href="/"
-               v-scroll-to="{ el: '.partners', offset: -20}"
-               class="text-xl m-4 hover:text-white hover:shadow-2xl">03</a>
-            <a id="activities" ref="activities" href="/"
-               v-scroll-to="{ el: '.activities', offset: -20}"
-               class="text-xl m-4 hover:text-white hover:shadow-2xl">04</a>
-            <a id="team" ref="team" href="/"
-               v-scroll-to="{ el: '.team', offset: -20}"
-               class="text-xl m-4 hover:text-white hover:shadow-2xl">05</a>
-            <a id="startups" ref="startups" href="/"
-               v-scroll-to="{ el: '.startups', offset: -20}"
-               class="text-xl m-4 hover:text-white hover:shadow-2xl">06</a>
-
+            <scrollactive class="side-menu flex flex-col">
+                <a href="#offers"
+                   class="scrollactive-item text-xl m-4 hover:text-white hover:shadow-2xl">01</a>
+                <a href="#space"
+                   class="scrollactive-item text-xl m-4 hover:text-whi te hover:shadow-2xl">02</a>
+                <a href="#partners"
+                   class="scrollactive-item text-xl m-4 hover:text-white hover:shadow-2xl">03</a>
+                <a href="#activities"
+                   class="scrollactive-item text-xl m-4 hover:text-white hover:shadow-2xl">04</a>
+                <a href="#team"
+                   class="scrollactive-item text-xl m-4 hover:text-white hover:shadow-2xl">05</a>
+                <a href="#startups"
+                   class="scrollactive-item text-xl m-4 hover:text-white hover:shadow-2xl">06</a>
+            </scrollactive>
         </div>
     </div>
 
     {{--contact us--}}
-    <tansition name="slideLeft">
+    <transition name="slideLeft">
         <div v-show="isOpen ? 'transition duration-500 ease-in-out transform' : ''"
              class="bgblue md:w-4/12 w-10/12 h-screen fixed right-0 z-10">
             <div class="w-2/12 md:w-3/12 z-10 top-0 left-0 m-4">
@@ -162,7 +150,7 @@
                 </div>
             </div>
         </div>
-    </tansition>
+    </transition>
     <div @click="openContact()"
          class="fixed bottom-0 right-0 md:mr-12 mr-4 md:mb-12 mb-6 text-white md:w-2/12 w-4/12 z-10">
         <img src="circle.png" alt="">
@@ -260,324 +248,318 @@
         </div>
 
         {{--we offer--}}
-        <intersect @enter="activeSection = 'offers'">
-            <div class="scrollspy offers flex flex-wrap justify-center md:mt-28 mt-10 p-4">
-                <div class="w-full text-start md:mx-16 mx-0">
-                    <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
-                        All about IoT Maker
-                    </h1>
-                </div>
-                {{--todo center them up and flip the middle image--}}
-                <div class="flex flex-col justify-center w-full md:m-4 m-0">
-                    <div class="flex md:flex-row flex-col-reverse justify-around md:mx-4 mx-0">
 
-                        <div class="flex flex-col md:w-7/12 w-full md:mt-0 mt-6">
-                            <h1 class="text-white text-4xl">
-                                Vision
-                            </h1>
-                            <p class="text-xl text-gray-300 mt-6">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque dicta fugiat harum
-                                neque
-                                nesciunt nobis quasi quod reprehenderit sit. Consectetur distinctio ducimus eligendi
-                                placeat
-                                quae qui saepe velit voluptatum!
-                                Consectetur distinctio ducimus eligendi placeat
-                                quae qui saepe velit voluptatum!f
-                            </p>
-                        </div>
-
-                        <div class="md:w-3/12 w:10/12 flex justify-center">
-                            <img src="coworking.png" alt="">
-                        </div>
-
-                    </div>
-                    <div class="flex md:flex-row flex-col-reverse justify-around md:mx-4 mx-0 mt-10">
-
-                        <div class="flex flex-col md:w-7/12 w-full md:mt-0 mt-6">
-                            <h1 class="text-white text-4xl">
-                                Vision
-                            </h1>
-                            <p class="text-xl text-gray-300 mt-6">
-                                It is not just a place to gather but its an opportunity to explore, learnand how to use
-                                materials as well as develop creative projects.
-                                Imagine DIY meets education! Makerspace is a place where you can launch your creativity
-                                and satisfy your eagerness to learn and be aware of useing Machines to create
-                                prototypes.
-                            </p>
-                        </div>
-
-                        <div class="md:w-3/12 w:10/12 flex justify-center">
-                            <img src="learn.png" alt="">
-                        </div>
-
-                    </div>
-                    <div class="flex md:flex-row flex-col-reverse justify-around md:mx-4 mx-0 mt-10">
-
-                        <div class="flex flex-col md:w-7/12 w-full md:mt-0 mt-6">
-                            <h1 class="text-white text-4xl">
-                                Vision
-                            </h1>
-                            <p class="text-xl text-gray-300 mt-6">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque dicta fugiat harum
-                                neque
-                                nesciunt nobis quasi quod reprehenderit sit. Consectetur distinctio ducimus eligendi
-                                placeat
-                                quae qui saepe velit voluptatum!
-                                Consectetur distinctio ducimus eligendi placeat
-                                quae qui saepe velit voluptatum!gg
-                            </p>
-                        </div>
-
-                        <div class="md:w-3/12 w-9/12 flex justify-center self-center md:-mr-0 -mr-4">
-                            <img class="w-10/12" src="workshop.png" alt="">
-                        </div>
-
-                    </div>
-
-
-                </div>
+        <div id="offers" class="scrollspy offers flex flex-wrap justify-center md:mt-28 mt-10 p-4">
+            <div class="w-full text-start md:mx-16 mx-0">
+                <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
+                    All about IoT Maker
+                </h1>
             </div>
-        </intersect>
+            {{--todo center them up and flip the middle image--}}
+            <div class="flex flex-col justify-center w-full md:m-4 m-0">
+                <div class="flex md:flex-row flex-col-reverse justify-around md:mx-4 mx-0">
+
+                    <div class="flex flex-col md:w-7/12 w-full md:mt-0 mt-6">
+                        <h1 class="text-white text-4xl">
+                            Vision
+                        </h1>
+                        <p class="text-xl text-gray-300 mt-6">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque dicta fugiat harum
+                            neque
+                            nesciunt nobis quasi quod reprehenderit sit. Consectetur distinctio ducimus eligendi
+                            placeat
+                            quae qui saepe velit voluptatum!
+                            Consectetur distinctio ducimus eligendi placeat
+                            quae qui saepe velit voluptatum!f
+                        </p>
+                    </div>
+
+                    <div class="md:w-3/12 w:10/12 flex justify-center">
+                        <img src="coworking.png" alt="">
+                    </div>
+
+                </div>
+                <div class="flex md:flex-row flex-col-reverse justify-around md:mx-4 mx-0 mt-10">
+
+                    <div class="flex flex-col md:w-7/12 w-full md:mt-0 mt-6">
+                        <h1 class="text-white text-4xl">
+                            Vision
+                        </h1>
+                        <p class="text-xl text-gray-300 mt-6">
+                            It is not just a place to gather but its an opportunity to explore, learnand how to use
+                            materials as well as develop creative projects.
+                            Imagine DIY meets education! Makerspace is a place where you can launch your creativity
+                            and satisfy your eagerness to learn and be aware of useing Machines to create
+                            prototypes.
+                        </p>
+                    </div>
+
+                    <div class="md:w-3/12 w:10/12 flex justify-center">
+                        <img src="learn.png" alt="">
+                    </div>
+
+                </div>
+                <div class="flex md:flex-row flex-col-reverse justify-around md:mx-4 mx-0 mt-10">
+
+                    <div class="flex flex-col md:w-7/12 w-full md:mt-0 mt-6">
+                        <h1 class="text-white text-4xl">
+                            Vision
+                        </h1>
+                        <p class="text-xl text-gray-300 mt-6">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque dicta fugiat harum
+                            neque
+                            nesciunt nobis quasi quod reprehenderit sit. Consectetur distinctio ducimus eligendi
+                            placeat
+                            quae qui saepe velit voluptatum!
+                            Consectetur distinctio ducimus eligendi placeat
+                            quae qui saepe velit voluptatum!gg
+                        </p>
+                    </div>
+
+                    <div class="md:w-3/12 w-9/12 flex justify-center self-center md:-mr-0 -mr-4">
+                        <img class="w-10/12" src="workshop.png" alt="">
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
 
         {{--space--}}
-        <intersect @enter="activeSection = 'space'">
-            <div class="scrollspy space flex flex-wrap justify-center mt-32 p-4">
-                <div class="w-full text-center">
-                    <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
-                        Our Space
-                    </h1>
-                </div>
-                <div class="grid md:grid-cols-2 grid-cols-1 gap-6 justify-items-center">
-                    <div class="bg-black rounded p-6 flex flex-col justify-center md:w-10/12 w-full">
-                        <img class="m-2 md:w-8/12 w-full self-center" src="bigspace%20copy.png" alt="">
-                        <h1 class="text-white text-2xl mt-3">
-                            Maker Space
-                        </h1>
-                        <p class="text-gray-300 text-sm">
-                            Lorem ipsum dolorgr sit amet, consectetur adipisicing elit. Aliquid asperiores blanditiis
-                            dignissimos, dolore doloremque earum eius fugit nam officia quas quis quisquam repellat
-                            repudiandae unde ut vel veritatis vero voluptates.
-                        </p>
-                    </div>
-                    <div class="bg-black rounded p-6 flex flex-col justify-items-center md:w-10/12 w-full">
-                        <img class="m-2 md:w-6/12 w-full self-center" src="makerspace.png" alt="">
-                        <h1 class="text-white text-2xl mt-3">
-                            Maker Space
-                        </h1>
-                        <p class="text-gray-300 text-sm">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores blanditiis
-                            dignissimos, dolore doloremque earum eius fugit nam officia quas quis quisquam repellat
-                            repudiandae unde ut vel veritatis vero voluptates.
-                        </p>
-                    </div>
-                </div>
 
+        <div id="space" class="scrollspy space flex flex-wrap justify-center mt-32 p-4">
+            <div class="w-full text-center">
+                <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
+                    Our Space
+                </h1>
             </div>
-        </intersect>
+            <div class="grid md:grid-cols-2 grid-cols-1 gap-6 justify-items-center">
+                <div class="bg-black rounded p-6 flex flex-col justify-center md:w-10/12 w-full">
+                    <img class="m-2 md:w-8/12 w-full self-center" src="bigspace%20copy.png" alt="">
+                    <h1 class="text-white text-2xl mt-3">
+                        Maker Space
+                    </h1>
+                    <p class="text-gray-300 text-sm">
+                        Lorem ipsum dolorgr sit amet, consectetur adipisicing elit. Aliquid asperiores blanditiis
+                        dignissimos, dolore doloremque earum eius fugit nam officia quas quis quisquam repellat
+                        repudiandae unde ut vel veritatis vero voluptates.
+                    </p>
+                </div>
+                <div class="bg-black rounded p-6 flex flex-col justify-items-center md:w-10/12 w-full">
+                    <img class="m-2 md:w-6/12 w-full self-center" src="makerspace.png" alt="">
+                    <h1 class="text-white text-2xl mt-3">
+                        Maker Space
+                    </h1>
+                    <p class="text-gray-300 text-sm">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores blanditiis
+                        dignissimos, dolore doloremque earum eius fugit nam officia quas quis quisquam repellat
+                        repudiandae unde ut vel veritatis vero voluptates.
+                    </p>
+                </div>
+            </div>
+
+        </div>
 
         {{--partners--}}
-        <intersect @enter="activeSection = 'partners'">
-            <div class="scrollspy partners flex flex-wrap justify-center mt-32">
-                <div class="w-full text-center">
-                    <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
-                        Our Partners
-                    </h1>
-                </div>
-                <div class="flex justify-center w-full bg-black">
-                    {{--partner--}}
-                    <div class="flex justify-between md:py-8 md:px-12 py-3 px-4 text-white md:w-6/12 w-full">
-                        <div class="md:w-2/12 w-5/12 mx-4">
-                            <img src="mosulspace.png" alt="">
-                        </div>
-                        <div class="md:w-3/12 w-6/12">
-                            <img src="fieldready.png" alt="">
-                        </div>
+
+        <div id="partners" class="scrollspy partners flex flex-wrap justify-center mt-32">
+            <div class="w-full text-center">
+                <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
+                    Our Partners
+                </h1>
+            </div>
+            <div class="flex justify-center w-full bg-black">
+                {{--partner--}}
+                <div class="flex justify-between md:py-8 md:px-12 py-3 px-4 text-white md:w-6/12 w-full">
+                    <div class="md:w-2/12 w-5/12 mx-4">
+                        <img src="mosulspace.png" alt="">
+                    </div>
+                    <div class="md:w-3/12 w-6/12">
+                        <img src="fieldready.png" alt="">
                     </div>
                 </div>
             </div>
-        </intersect>
+        </div>
 
         {{--activities--}}
-        <intersect @enter="activeSection = 'activities'">
-            <div class="scrollspy activities flex flex-wrap justify-center w-full mt-32">
-                <div class="w-full text-center">
-                    <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
-                        What we've been up to
-                    </h1>
-                </div>
 
-                <div class="flex flex-col md:w-10/12 w-full m-4">
-
-                    <img class="md:w-9/12 w-full self-center md:-ml-52 -ml-0" src="makercamp.png" alt="">
-
-                    <div class="md:w-10/12 w-full p-4 bg-black md:-mt-20 -mt-10 md:ml-72 ml-0 opacity-90 rounded self-center">
-                        <h1 class="text-white md:text-4xl text-xl">
-                            Maker Camp
-                        </h1>
-                        <h1 class="text-white text-gray-300 md:text-xl text-lg mt-2">
-                            2019-2
-                        </h1>
-                        <p class="text-gray-300 mt-4 text-sm md:text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam, commodi
-                            consequatur,g
-                            deserunt dicta, fugit ipsam laudantium maiores nam necessitatibus nihil nostrum optio
-                            pariatur
-                            provident recusandae ullam ut veritatis voluptate!
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="flex flex-col md:w-11/12 w-full m-4">
-
-                    <img class="md:w-8/12 w-11/12 self-center md:-mr-80 -ml-0" src="innovationday.png" alt="">
-
-                    <div class="md:w-8/12 w-full p-4 bg-black md:-mt-20 -mt-10 md:ml-24 ml-0 opacity-90 rounded">
-                        <h1 class="text-white md:text-4xl text-xl">
-                            Maker Camp
-                        </h1>
-                        <h1 class="text-white text-gray-300 md:text-xl text-lg mt-2">
-                            2019-2
-                        </h1>
-                        <p class="text-gray-300 mt-4 text-sm md:text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam, commodi
-                            consequatur,
-                            deserunt dicta, fugit ipsam laudantium maiores nam necessitatibus nihil nostrum optio
-                            pariaturg
-                            provident recusandae ullam ut veritatis voluptate!
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="flex flex-col md:w-10/12 w-full m-4">
-
-                    <img class="md:w-9/12 w-full self-center md:-ml-52 -ml-0" src="3dcompetition.png" alt="">
-
-                    <div class="md:w-10/12 w-full p-4 bg-black md:-mt-20 -mt-10 md:ml-72 ml-0 opacity-90 rounded self-center">
-                        <h1 class="text-white md:text-4xl text-xl">
-                            Maker Camp
-                        </h1>
-                        <h1 class="text-white text-gray-300 md:text-xl text-lg mt-2">
-                            2019-2
-                        </h1>
-                        <p class="text-gray-300 mt-4 text-sm md:text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam, commodi
-                            consequatur,g
-                            deserunt dicta, fugit ipsam laudantium maiores nam necessitatibus nihil nostrum optio
-                            pariatur
-                            provident recusandae ullam ut veritatis voluptate!
-                        </p>
-                    </div>
-
-                </div>
+        <div id="activities" class="scrollspy activities flex flex-wrap justify-center w-full mt-32">
+            <div class="w-full text-center">
+                <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
+                    What we've been up to
+                </h1>
             </div>
-        </intersect>
+
+            <div class="flex flex-col md:w-10/12 w-full m-4">
+
+                <img class="md:w-9/12 w-full self-center md:-ml-52 -ml-0" src="makercamp.png" alt="">
+
+                <div class="md:w-10/12 w-full p-4 bg-black md:-mt-20 -mt-10 md:ml-72 ml-0 opacity-90 rounded self-center">
+                    <h1 class="text-white md:text-4xl text-xl">
+                        Maker Camp
+                    </h1>
+                    <h1 class="text-white text-gray-300 md:text-xl text-lg mt-2">
+                        2019-2
+                    </h1>
+                    <p class="text-gray-300 mt-4 text-sm md:text-base">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam, commodi
+                        consequatur,g
+                        deserunt dicta, fugit ipsam laudantium maiores nam necessitatibus nihil nostrum optio
+                        pariatur
+                        provident recusandae ullam ut veritatis voluptate!
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col md:w-11/12 w-full m-4">
+
+                <img class="md:w-8/12 w-11/12 self-center md:-mr-80 -ml-0" src="innovationday.png" alt="">
+
+                <div class="md:w-8/12 w-full p-4 bg-black md:-mt-20 -mt-10 md:ml-24 ml-0 opacity-90 rounded">
+                    <h1 class="text-white md:text-4xl text-xl">
+                        Maker Camp
+                    </h1>
+                    <h1 class="text-white text-gray-300 md:text-xl text-lg mt-2">
+                        2019-2
+                    </h1>
+                    <p class="text-gray-300 mt-4 text-sm md:text-base">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam, commodi
+                        consequatur,
+                        deserunt dicta, fugit ipsam laudantium maiores nam necessitatibus nihil nostrum optio
+                        pariaturg
+                        provident recusandae ullam ut veritatis voluptate!
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col md:w-10/12 w-full m-4">
+
+                <img class="md:w-9/12 w-full self-center md:-ml-52 -ml-0" src="3dcompetition.png" alt="">
+
+                <div class="md:w-10/12 w-full p-4 bg-black md:-mt-20 -mt-10 md:ml-72 ml-0 opacity-90 rounded self-center">
+                    <h1 class="text-white md:text-4xl text-xl">
+                        Maker Camp
+                    </h1>
+                    <h1 class="text-white text-gray-300 md:text-xl text-lg mt-2">
+                        2019-2
+                    </h1>
+                    <p class="text-gray-300 mt-4 text-sm md:text-base">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam, commodi
+                        consequatur,g
+                        deserunt dicta, fugit ipsam laudantium maiores nam necessitatibus nihil nostrum optio
+                        pariatur
+                        provident recusandae ullam ut veritatis voluptate!
+                    </p>
+                </div>
+
+            </div>
+        </div>
 
         {{--team--}}
-        <intersect @enter="activeSection = 'team'">
-            <div class="scrollspy team flex flex-wrap justify-center mt-32">
-                <div class="w-full text-center">
-                    <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
-                        Our Team
+
+        <div id="team" class="scrollspy team flex flex-wrap justify-center mt-32">
+            <div class="w-full text-center">
+                <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
+                    Our Team
+                </h1>
+            </div>
+            <div class="grid md:grid-cols-3 grid-cols-1 gap-6 justify-items-center w-full bg-black p-4">
+                <div class="flex flex-col w-8/12">
+                    <img src="test.png" alt="">
+                    <h1 class="md:text-3xl text-xl text-white mt-3 text-center">
+                        Sara Falah
+                    </h1>
+                    <h1 class="text-base text-gray-200 mt-1 text-center">
+                        Lead Trainer
                     </h1>
                 </div>
-                <div class="grid md:grid-cols-3 grid-cols-1 gap-6 justify-items-center w-full bg-black p-4">
-                    <div class="flex flex-col w-8/12">
-                        <img src="test.png" alt="">
-                        <h1 class="md:text-3xl text-xl text-white mt-3 text-center">
-                            Sara Falah
-                        </h1>
-                        <h1 class="text-base text-gray-200 mt-1 text-center">
-                            Lead Trainer
-                        </h1>
-                    </div>
-                    <div class="flex flex-col w-8/12">
-                        <img src="test.png" alt="">
-                        <h1 class="md:text-3xl text-xl text-white mt-3 text-center">
-                            Sara Falah
-                        </h1>
-                        <h1 class="text-base text-gray-200 mt-1 text-center">
-                            Lead Trainer
-                        </h1>
-                    </div>
-                    <div class="flex flex-col w-8/12">
-                        <img src="test.png" alt="">
-                        <h1 class="md:text-3xl text-xl text-white mt-3 text-center">
-                            Sara Falah
-                        </h1>
-                        <h1 class="text-base text-gray-200 mt-1 text-center">
-                            Lead Trainer
-                        </h1>
-                    </div>
+                <div class="flex flex-col w-8/12">
+                    <img src="test.png" alt="">
+                    <h1 class="md:text-3xl text-xl text-white mt-3 text-center">
+                        Sara Falah
+                    </h1>
+                    <h1 class="text-base text-gray-200 mt-1 text-center">
+                        Lead Trainer
+                    </h1>
+                </div>
+                <div class="flex flex-col w-8/12">
+                    <img src="test.png" alt="">
+                    <h1 class="md:text-3xl text-xl text-white mt-3 text-center">
+                        Sara Falah
+                    </h1>
+                    <h1 class="text-base text-gray-200 mt-1 text-center">
+                        Lead Trainer
+                    </h1>
                 </div>
             </div>
-        </intersect>
+        </div>
 
         {{--startups--}}
-        <intersect @enter="activeSection = 'startups'">
-            <div class="scrollspy startups flex flex-wrap justify-center mt-32">
-                <div class="w-full text-center">
-                    <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
-                        Our Startup Community
-                    </h1>
-                </div>
-                <div class="flex justify-center w-full bg-black">
-                    <div class="flex py-4 px-12 text-white">
-                        <carousel class="mt-12" autoplay :pagination-color="'#a6a7aa'"
-                                  :pagination-active-color="'white'" :pagination-size="6"
-                                  :per-page-custom="[[480, 2], [768, 3], [1024, 4]]">
-                            {{--                        todo--}}
-                            {{--                       add other startups and make dragon breath whiter--}}
-                            <slide>
-                                <div class="md:w-5/12 w-8/12 opacity-70 self-center">
-                                    <img src="startups/Buyut%20Service@3x.png" alt="">
-                                </div>
-                            </slide>
-                            <slide>
-                                <div class="md:w-5/12 w-8/12 opacity-70 self-center">
-                                    <img src="startups/رحلات.png" alt="">
-                                </div>
-                            </slide>
-                            <slide>
-                                <div class="md:w-2/12 w-3/12 opacity-70 self-center">
-                                    <img src="startups/RE-FOCUS%20LOGO.png" alt="">
-                                </div>
-                            </slide>
-                            <slide>
-                                <div class="md:w-5/12 w-8/12 opacity-70 self-center">
-                                    <img src="startups/painterchy%20logo.png" alt="">
-                                </div>
-                            </slide>
-                            <slide>
-                                <div class="md:w-5/12 w-8/12 opacity-70 self-center">
-                                    <img src="startups/logo1%20work%20wp%20(2)%20copy.png" alt="">
-                                </div>
-                            </slide>
-                            <slide>
-                                <div class="md:w-5/12 w-8/12 opacity-70 self-center">
-                                    <img src="startups/logo%20Kursi.png" alt="">
-                                </div>
-                            </slide>
-                            <slide>
-                                <div class="md:w-5/12 w-8/12 opacity-70 self-center">
-                                    <img src="startups/Farha.png" alt="">
-                                </div>
-                            </slide>
-                            <slide>
-                                <div class="md:w-5/12 w-8/12 opacity-70 self-center">
-                                    <img src="startups/drako%20final%20expo.png" alt="">
-                                </div>
-                            </slide>
-                        </carousel>
-                    </div>
+
+        <div id="team" class="scrollspy startups flex flex-wrap justify-center mt-32">
+            <div class="w-full text-center">
+                <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
+                    Our Startup Community
+                </h1>
+            </div>
+            <div class="flex justify-center w-full bg-black">
+                <div class="flex py-4 px-12 text-white">
+                    <carousel class="mt-12" autoplay :pagination-color="'#a6a7aa'"
+                              :pagination-active-color="'white'" :pagination-size="6"
+                              :per-page-custom="[[480, 2], [768, 3], [1024, 4]]">
+                        {{--                        todo--}}
+                        {{--                       add other startups and make dragon breath whiter--}}
+                        <slide>
+                            <div class="md:w-5/12 w-8/12 opacity-70 self-center">
+                                <img src="startups/Buyut%20Service@3x.png" alt="">
+                            </div>
+                        </slide>
+                        <slide>
+                            <div class="md:w-5/12 w-8/12 opacity-70 self-center">
+                                <img src="startups/رحلات.png" alt="">
+                            </div>
+                        </slide>
+                        <slide>
+                            <div class="md:w-2/12 w-3/12 opacity-70 self-center">
+                                <img src="startups/RE-FOCUS%20LOGO.png" alt="">
+                            </div>
+                        </slide>
+                        <slide>
+                            <div class="md:w-5/12 w-8/12 opacity-70 self-center">
+                                <img src="startups/painterchy%20logo.png" alt="">
+                            </div>
+                        </slide>
+                        <slide>
+                            <div class="md:w-5/12 w-8/12 opacity-70 self-center">
+                                <img src="startups/logo1%20work%20wp%20(2)%20copy.png" alt="">
+                            </div>
+                        </slide>
+                        <slide>
+                            <div class="md:w-5/12 w-8/12 opacity-70 self-center">
+                                <img src="startups/logo%20Kursi.png" alt="">
+                            </div>
+                        </slide>
+                        <slide>
+                            <div class="md:w-5/12 w-8/12 opacity-70 self-center">
+                                <img src="startups/Farha.png" alt="">
+                            </div>
+                        </slide>
+                        <slide>
+                            <div class="md:w-5/12 w-8/12 opacity-70 self-center">
+                                <img src="startups/drako%20final%20expo.png" alt="">
+                            </div>
+                        </slide>
+                    </carousel>
                 </div>
             </div>
-        </intersect>
+        </div>
 
         {{--footer--}}
 
-        <div class="flex flex-wrap justify-center bgbyellow opacity-90 mt-32">
+        <div id="team" class="flex flex-wrap justify-center bgbyellow opacity-90 mt-32">
             <div class="w-full p-4">
                 <h1 class="text-white tracking-wide">
                     hello
@@ -604,6 +586,7 @@
         methods: {
             activeOptions() {
                 if (this.activeSection) {
+                    console.log(this.activeSection)
                     this.$refs[this.activeSection].classList.toggle('text-white')
                 }
                 console.log(this.$refs[this.activeSection])
