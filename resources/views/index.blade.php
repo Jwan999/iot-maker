@@ -60,6 +60,13 @@
             }
         }
 
+        .side-menu .active {
+            color: white;
+        }
+        .mobile-menu .active{
+            color: white
+        }
+
     </style>
 </head>
 <body class="bg-shade-black relative overflow-x-hidden max-w-full">
@@ -77,23 +84,24 @@
             <div class="w-12 mr-4">
                 <img src="smalllogo.png" alt="">
             </div>
-            <scrollactive class="mobile-nav">
-                <a href="#offers" class="text-white mx-3">
+            <scrollactive class="mobile-menu" active-class="active" :offset="40" :duration="800"
+                          bezier-easing-value=".5,0,.35,1">
+                <a href="#offers" class="text-gray-300 mx-3">
                     01
                 </a>
-                <a href="#space" class="text-white mx-3">
+                <a href="#space" class="text-gray-300 mx-3">
                     02
                 </a>
-                <a href="#partners" class="text-white mx-3">
+                <a href="#partners" class="text-gray-300 mx-3">
                     03
                 </a>
-                <a href="#activities" class="text-white mx-3">
+                <a href="#activities" class="text-gray-300 mx-3">
                     04
                 </a>
-                <a href="#team" class="text-white mx-3">
+                <a href="#team" class="text-gray-300 mx-3">
                     05
                 </a>
-                <a href="#startups" class="text-white mx-3">
+                <a href="#startups" class="text-gray-300 mx-3">
                     06
                 </a>
             </scrollactive>
@@ -109,7 +117,8 @@
         <div class="flex flex-col justify-center text-center text-gray-500 mt-20">
             {{--todo--}}
             {{--make active states for each section also add the name of the section when clicked--}}
-            <scrollactive class="side-menu flex flex-col">
+            <scrollactive class="side-menu flex flex-col" active-class="active" :offset="400" :duration="800"
+                          bezier-easing-value=".5,0,.35,1">
                 <a href="#offers"
                    class="scrollactive-item text-xl m-4 hover:text-white hover:shadow-2xl">01</a>
                 <a href="#space"
@@ -499,7 +508,7 @@
 
         {{--startups--}}
 
-        <div id="team" class="scrollspy startups flex flex-wrap justify-center mt-32">
+        <div id="startups" class="scrollspy startups flex flex-wrap justify-center mt-32">
             <div class="w-full text-center">
                 <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
                     Our Startup Community
@@ -559,7 +568,7 @@
 
         {{--footer--}}
 
-        <div id="team" class="flex flex-wrap justify-center bgbyellow opacity-90 mt-32">
+        <div class="flex flex-wrap justify-center bgbyellow opacity-90 mt-32">
             <div class="w-full p-4">
                 <h1 class="text-white tracking-wide">
                     hello
