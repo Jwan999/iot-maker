@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="/css/app.css" rel="stylesheet">
     <link href="/fonts/avantgarde-bk-bt/avantgarde.css" rel="stylesheet">
-    <link href="resources/css/vue-transition.css" rel="stylesheet" type="text/css" media="all"/>
 
 
     <link rel="icon" href="IoTLogo.png">
