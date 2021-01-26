@@ -159,7 +159,7 @@
                            placeholder="Body" type="text">
                 </div>
                 <div class="mt-3">
-                    test
+
                 </div>
             </div>
         </div>
@@ -204,12 +204,8 @@
                 </div>
                 <div class="mt-8 mb-80 md:ml-14 ml-0">
                     <a @click="openProjects" class="text-yellow-500 md:text-2xl text-xl hover:text-yellow-400">
-                        PROJECTS ->
+                        CHECK OUT WHAT WE DO ->
                     </a>
-                    {{--                todo--}}
-                    {{--                <div class="bg-black opacity-60 w-4/12 h-72 mt-4 text-white border border-yellow-500 rounded p-4">--}}
-                    {{--                    <img src="bicycle_PNG5374.png" alt="">--}}
-                    {{--                </div>--}}
                 </div>
             </div>
             <div v-show="projects">
