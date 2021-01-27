@@ -8,7 +8,6 @@
     <link href="/css/app.css" rel="stylesheet">
     <link href="/fonts/avantgarde-bk-bt/avantgarde.css" rel="stylesheet">
 
-
     <link rel="icon" href="IoTLogo.png">
 
     <title>IoT Maker</title>
@@ -21,7 +20,6 @@
         .bg-shade-black {
             background-color: #0d0e11;
         }
-
 
         .bg- {
             background-color: #050505;
@@ -56,7 +54,6 @@
 
             .content-mobile {
                 display: initial;
-
             }
         }
 
@@ -145,16 +142,40 @@
                 <h1 class="text-white text-xl mb-3">
                     Hello there
                 </h1>
-                <div>
-                    <input class="outline-none placeholder-gray-200 text-lg rounded w-full py-2 px-3 border-blue-200 border mt-3"
-                           placeholder="Email Address" type="text">
-                    <input class="outline-none placeholder-gray-200 text-lg rounded w-full py-2 px-3 border-blue-200 border mt-3"
-                           placeholder="Subject" type="text">
-                    <input class="outline-none placeholder-gray-200 text-lg rounded w-full py-2 px-3 border-blue-200 border mt-3 h-32"
-                           placeholder="Body" type="text">
-                </div>
+                {{--todo--}}
+                @if(Session::has('success'))
+                    <div class="alert alert-success">
+                        {{Session::get('success')}}
+                    </div>
+                @endif
+                <form method="post" action="/contact">
+                    @csrf
+                    <div class="w-full">
+                        <input name="email"
+                               class="outline-none placeholder-gray-200 text-lg rounded w-full py-2 px-3 border-blue-200 border mt-3"
+                               placeholder="Email Address" type="text">
+                        <input name="subject"
+                               class="outline-none placeholder-gray-200 text-lg rounded w-full py-2 px-3 border-blue-200 border mt-3"
+                               placeholder="Subject" type="text">
+                        <input name="body"
+                               class="outline-none placeholder-gray-200 text-lg rounded w-full py-2 px-3 border-blue-200 border mt-3 h-32"
+                               placeholder="Body" type="text">
+                        <button class="self-end mt-3 bgbyellow py-2 px-3 rounded">
+                            Submit
+                        </button>
+                    </div>
+                </form>
                 <div class="mt-3">
-
+                    <svg class="fill-current text-yellow-500 w-7 h-7" xmlns="http://www.w3.org/2000/svg"
+                         data-name="Layer 1" viewBox="0 0 24 24">
+                        <path
+                                d="M17.34,5.46h0a1.2,1.2,0,1,0,1.2,1.2A1.2,1.2,0,0,0,17.34,5.46Zm4.6,2.42a7.59,7.59,0,0,0-.46-2.43,4.94,4.94,0,0,0-1.16-1.77,4.7,4.7,0,0,0-1.77-1.15,7.3,7.3,0,0,0-2.43-.47C15.06,2,14.72,2,12,2s-3.06,0-4.12.06a7.3,7.3,0,0,0-2.43.47A4.78,4.78,0,0,0,3.68,3.68,4.7,4.7,0,0,0,2.53,5.45a7.3,7.3,0,0,0-.47,2.43C2,8.94,2,9.28,2,12s0,3.06.06,4.12a7.3,7.3,0,0,0,.47,2.43,4.7,4.7,0,0,0,1.15,1.77,4.78,4.78,0,0,0,1.77,1.15,7.3,7.3,0,0,0,2.43.47C8.94,22,9.28,22,12,22s3.06,0,4.12-.06a7.3,7.3,0,0,0,2.43-.47,4.7,4.7,0,0,0,1.77-1.15,4.85,4.85,0,0,0,1.16-1.77,7.59,7.59,0,0,0,.46-2.43c0-1.06.06-1.4.06-4.12S22,8.94,21.94,7.88ZM20.14,16a5.61,5.61,0,0,1-.34,1.86,3.06,3.06,0,0,1-.75,1.15,3.19,3.19,0,0,1-1.15.75,5.61,5.61,0,0,1-1.86.34c-1,.05-1.37.06-4,.06s-3,0-4-.06A5.73,5.73,0,0,1,6.1,19.8,3.27,3.27,0,0,1,5,19.05a3,3,0,0,1-.74-1.15A5.54,5.54,0,0,1,3.86,16c0-1-.06-1.37-.06-4s0-3,.06-4A5.54,5.54,0,0,1,4.21,6.1,3,3,0,0,1,5,5,3.14,3.14,0,0,1,6.1,4.2,5.73,5.73,0,0,1,8,3.86c1,0,1.37-.06,4-.06s3,0,4,.06a5.61,5.61,0,0,1,1.86.34A3.06,3.06,0,0,1,19.05,5,3.06,3.06,0,0,1,19.8,6.1,5.61,5.61,0,0,1,20.14,8c.05,1,.06,1.37.06,4S20.19,15,20.14,16ZM12,6.87A5.13,5.13,0,1,0,17.14,12,5.12,5.12,0,0,0,12,6.87Zm0,8.46A3.33,3.33,0,1,1,15.33,12,3.33,3.33,0,0,1,12,15.33Z"/>
+                    </svg>
+                    <svg class="fill-current text-yellow-500 w-7 h-7" xmlns="http://www.w3.org/2000/svg"
+                         data-name="Layer 1" viewBox="0 0 24 24">
+                        <path
+                                d="M15.12,5.32H17V2.14A26.11,26.11,0,0,0,14.26,2C11.54,2,9.68,3.66,9.68,6.7V9.32H6.61v3.56H9.68V22h3.68V12.88h3.06l.46-3.56H13.36V7.05C13.36,6,13.64,5.32,15.12,5.32Z"/>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -186,15 +207,7 @@
 
             <div v-show="projects == false">
                 <div class="mt-12 w-7/12 md:ml-14 ml-0 w-full md:w-10/12">
-                    <p class="text-gray-300 md:text-lg text-">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        At
-                        eveniet
-                        illog
-                        illum inventore maiores nisi
-                        obcaecati officia similique vitae! Corporis distinctio, excepturi facilis fugiat officia
-                        officiis
-                        quaerat
-                        quam quo repellat!
+                    <p class="text-gray-300 md:text-lg text-">Smth smth
                     </p>
                 </div>
                 <div class="mt-8 mb-80 md:ml-14 ml-0">
@@ -260,7 +273,7 @@
         <div id="offers" class="scrollspy offers flex flex-wrap justify-center md:mt-28 mt-10 p-4">
             <div class="w-full text-start md:mx-16 mx-0">
                 <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
-                    All about IoT Maker
+                    Get to know IoT Maker
                 </h1>
             </div>
             <div class="flex flex-col justify-center w-full md:m-4 m-0">
@@ -268,16 +281,13 @@
 
                     <div class="flex flex-col md:w-7/12 w-full md:mt-0 mt-6">
                         <h1 class="text-white text-4xl">
-                            Vision
+                            Mission
                         </h1>
                         <p class="text-xl text-gray-300 mt-6">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque dicta fugiat harum
-                            neque
-                            nesciunt nobis quasi quod reprehenderit sit. Consectetur distinctio ducimus eligendi
-                            placeat
-                            quae qui saepe velit voluptatum!
-                            Consectetur distinctio ducimus eligendi placeat
-                            quae qui saepe velit voluptatum!f
+                            Our co-working space is a true representation of a collaborative environment where people
+                            can
+                            get comfortable with innovation.
+                            Our friendly space allows you to get things done creatively and proudly meet your goals.
                         </p>
                     </div>
 
@@ -293,11 +303,12 @@
                             Vision
                         </h1>
                         <p class="text-xl text-gray-300 mt-6">
-                            It is not just a place to gather but its an opportunity to explore, learnand how to use
-                            materials as well as develop creative projects.
-                            Imagine DIY meets education! Makerspace is a place where you can launch your creativity
-                            and satisfy your eagerness to learn and be aware of useing Machines to create
-                            prototypes.
+                            With the help of a group consisted of talented and motivated trainers we provide a wide
+                            variety
+                            of technical courses and
+                            mentorships which made our vision of expanding the community of 3D modeling, design
+                            manufacturing, cinema 4D, electronics,
+                            robotics, Ai and web development come to live.
                         </p>
                     </div>
 
@@ -310,16 +321,13 @@
 
                     <div class="flex flex-col md:w-7/12 w-full md:mt-0 mt-6">
                         <h1 class="text-white text-4xl">
-                            Vision
+                            Passion
                         </h1>
                         <p class="text-xl text-gray-300 mt-6">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque dicta fugiat harum
-                            neque
-                            nesciunt nobis quasi quod reprehenderit sit. Consectetur distinctio ducimus eligendi
-                            placeat
-                            quae qui saepe velit voluptatum!
-                            Consectetur distinctio ducimus eligendi placeat
-                            quae qui saepe velit voluptatum!gg
+                            We are here to share the passion of creating with you, you can learn how to use
+                            materials as well as build cool projects.
+                            Imagine DIY meets education! Maker Space is a place where you can launch your creativity and
+                            satisfy your eagerness to learn and use machines to create prototypes.
                         </p>
                     </div>
 
@@ -345,12 +353,12 @@
                 <div class="bg-black rounded p-6 flex flex-col justify-center md:w-10/12 w-full">
                     <img class="m-2 md:w-8/12 w-full self-center" src="bigspace%20copy.png" alt="">
                     <h1 class="text-white text-2xl mt-3">
-                        Maker Space
+                        Co-working Space
                     </h1>
-                    <p class="text-gray-300 text-sm">
-                        Lorem ipsum dolorgr sit amet, consectetur adipisicing elit. Aliquid asperiores blanditiis
-                        dignissimos, dolore doloremque earum eius fugit nam officia quas quis quisquam repellat
-                        repudiandae unde ut vel veritatis vero voluptates.
+                    <p class="text-gray-300 text-sm mt-6">
+                        This is where you'll work, innovate and meet your goals.
+                        we've made sure our startups would have what they need to get things done, from consulting,
+                        branding or even a place to facilitate meetings
                     </p>
                 </div>
                 <div class="bg-black rounded p-6 flex flex-col justify-items-center md:w-10/12 w-full">
@@ -358,10 +366,9 @@
                     <h1 class="text-white text-2xl mt-3">
                         Maker Space
                     </h1>
-                    <p class="text-gray-300 text-sm">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores blanditiis
-                        dignissimos, dolore doloremque earum eius fugit nam officia quas quis quisquam repellat
-                        repudiandae unde ut vel veritatis vero voluptates.
+                    <p class="text-gray-300 text-sm mt-6">
+                        Where else would you want to unleash your creativity and build out your ideas.
+                        We'll be providing you with all the tools you could need.
                     </p>
                 </div>
             </div>
@@ -422,11 +429,11 @@
 
             <div class="flex flex-col md:w-11/12 w-full m-4">
 
-                <img class="md:w-8/12 w-11/12 self-center md:-mr-80 -ml-0" src="innovationday.png" alt="">
+                <img class="md:w-8/12 w-11/12 self-center md:-mr-80 -ml-0" src="innovationdat.png" alt="">
 
                 <div class="md:w-8/12 w-full p-4 bg-black md:-mt-20 -mt-10 md:ml-24 ml-0 opacity-90 rounded">
                     <h1 class="text-white md:text-4xl text-xl">
-                        Maker Camp
+                        Innovation Day
                     </h1>
                     <h1 class="text-white text-gray-300 md:text-xl text-lg mt-2">
                         2019-2
@@ -444,11 +451,11 @@
 
             <div class="flex flex-col md:w-10/12 w-full m-4">
 
-                <img class="md:w-9/12 w-full self-center md:-ml-52 -ml-0" src="3dcompetition.png" alt="">
+                <img class="md:w-9/12 w-full self-center md:-ml-52 -ml-0" src="3d.png" alt="">
 
                 <div class="md:w-10/12 w-full p-4 bg-black md:-mt-20 -mt-10 md:ml-72 ml-0 opacity-90 rounded self-center">
                     <h1 class="text-white md:text-4xl text-xl">
-                        Maker Camp
+                        3D Modeling Competition
                     </h1>
                     <h1 class="text-white text-gray-300 md:text-xl text-lg mt-2">
                         2019-2
