@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "iot-maker-303109",
+  "private_key_id": "e34966b0ad07c1f6e32631f3b05a19b5c9ff9040",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC6vsf5rvNjRSbx\nMfwNqN2tWew7SpeByE8SLZmn8h7HgZUpVyFCzlR7fxPKgJIS1fBreIIKbzPKjBbm\nk+vHpfHZsnY3fET5vv3ouJ14q49t0DqfMRpujof+cHVRsRliNlq3DHH8l69U2Fvr\nO53GJDDgseWG5rTrl/9Mn1hL+WiXWfR8uhTItMgTo3KlmMi/QSVi5uuHUruLEndb\nfN3I51zcHRd0SQgLb1JxfR+cMX9TJSMQeo3Q0wVJ94lU8gpx1E5IynhzGeUuaaIa\nWrBPkb9JqevPSXrWMH0jnnOOuvN09xD6UqpalHQD+SV5b0nQjy5NcfPHpay0Bu87\nXgPWYUDzAgMBAAECggEAROyaSVThnu+MfnQo5+++Fbe9QWr3/V4tlPOApWRvKMpy\nf8YZUBtwQf52kwSeJVaR/FCHiotdjbHj1+mbmd3tJCDCkhsLKDRuaYEOGdYUQ38Z\ny9ynOUvg9K+UFXksebu/ApWU0po3i7SpRGqGAnYkFiKCqSYoe1Xn0+NyBuSATm+x\n+IG/TkmuykL3AUXZ0Q++jCiz1zg0acfNa0B3knaIgi1JD0AlYE969Nisb/6uzGxL\nqvXnUSriFUgExHPqTVfceoU7EfOQUk6TqFtyLUoBhjvQtf8JKyCxofWeTr+xPhVd\n8JdVD8j26EEfthxfT0GjZGu/SpsE8Sd7yuhaAbk7rQKBgQD3Jl+inqGyofpKU+Qk\nNvTmyofFPGIwmnfeEMQX8RwuSYYMFtlZa7bkLpxH3pg1xiULYoa02/DHO3kzuMhg\n9CmqHkPIkAB97xw/kXHo2z0aJN7y+3HKcOOKQIoARX+1y5smaPElubRsLBaR03OP\nTKz41VSbp00gG7pl592SnQa/dwKBgQDBbq1hbRWYtlWtTzb5CEdWf8iRI8Of8Wv9\n952fY20wliiqh84nnubXja5vhHT7jz46Ph2Qm1Leq7NJ5PL5ZjDHanWGXwlQPXIp\nv9+ytUu4SBHK1raeeILbzCMsrJAwk89O8qwsOmetiBhtGcLWbDAIipuemTIxphGm\ncVG/pFnBZQKBgEReAByLBy3T8tm2xShjb3GcWtxrrLnHMRtjxerdjq8bNZKIi41Z\n55jNb/vNjotpiXvRwHOtV7i1Mfzlw8BWKmRdxOBpPUmY6FaJVFpWs1tVEbtjZQHc\nIoVu/v2+O+q9LOj+JJ8L9OXreD7UoGXmjv6yfJomOIaGRRTFhBx3hZNXAoGAdk7P\nVMt3bhP3iyzsHpzlpQ47Ciqpt+Xde1Q74ATb/9+Xt9WgTbNu1WAe1K5bLpGKKe1b\n/9pAcVjrK8MQqWHLa+y9PRZbh+xNKyPkGlWwnmHWIA37XCmxP+Y3jVduSYfeQBdF\nHzgJuaWH6xLajHNXXaIJVJO2k49TNE4TBffrvdECgYAvkyXPoPm1T5G5/s41tsIt\nPoF3flzf3xHg57ZhyJ/A0Lqilr53AcEBIhmIqkUMQSk8UGUOsAYfHNzYSpQBrOTG\nxjHignFeka4FgF3YBjDXOuu9zI4WOFxbKgsEM7gBimz2llWw9O+GYfEBz438SPpk\n12buRiWVMVs9FEBnUWWoCg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "iot-maker-analytics@iot-maker-303109.iam.gserviceaccount.com",
+  "client_id": "101898837330483217539",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/iot-maker-analytics%40iot-maker-303109.iam.gserviceaccount.com"
+}

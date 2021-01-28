@@ -17,4 +17,5 @@ Route::get('/', function () {
     return view('index');
 });
 
-//Route::post('/contact', 'ContactController@store');
+Route::post('/contact', '\App\Http\Controllers\ContactController@store');
+Route::get('google - analytics - summary', array('as' => 'google - analytics - summary', 'uses' => 'HomeController@getAnalyticsSummary'));

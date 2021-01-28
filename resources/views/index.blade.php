@@ -17,6 +17,11 @@
             /*overflow-x: hidden;*/
         }
 
+        html, body {
+            position: relative;
+            overflow-x: hidden;
+        }
+
         .bg-shade-black {
             background-color: #0d0e11;
         }
@@ -65,6 +70,9 @@
             color: #F39E19
         }
 
+        img {
+            align-self: flex-start;
+        }
     </style>
 </head>
 <body class="bg-shade-black relative overflow-x-hidden max-w-full">
@@ -108,7 +116,7 @@
     </div>
     {{--sidebar--}}
     {{-- todo using divide from tailwind--}}
-    <div class="flex content-desktop sticky top-0 left-0 justify-center bg-shade-black border-white border-r h-screen w-2/12 p-8">
+    <div class="flex content-desktop fixed z-10 top-0 left-0 justify-center bg-shade-black border-white border-r h-screen w-2/12 p-8">
         <div class="w-full flex justify-center">
             <img class="w-32" src="/IoTLogo.png" alt="">
         </div>
@@ -140,14 +148,14 @@
             </div>
             <div class="flex flex-col w-full p-4">
                 <h1 class="text-white text-xl mb-3">
-                    Hello there
+                    Reach out if you want
                 </h1>
                 {{--todo--}}
-                @if(Session::has('success'))
-                    <div class="alert alert-success">
-                        {{Session::get('success')}}
-                    </div>
-                @endif
+                {{--                @if(Session::has('success'))--}}
+                {{--                    <div class="alert alert-success">--}}
+                {{--                        {{Session::get('success')}}--}}
+                {{--                    </div>--}}
+                {{--                @endif--}}
                 <form method="post" action="/contact">
                     @csrf
                     <div class="w-full">
@@ -160,31 +168,46 @@
                         <input name="body"
                                class="outline-none placeholder-gray-200 text-lg rounded w-full py-2 px-3 border-blue-200 border mt-3 h-32"
                                placeholder="Body" type="text">
-                        <button class="self-end mt-3 bgbyellow py-2 px-3 rounded">
+                        <button type="submit" class="self-end mt-3 text-white bgbyellow py-2 px-3 rounded">
                             Submit
                         </button>
                     </div>
                 </form>
-                <div class="mt-3">
-                    <svg class="fill-current text-yellow-500 w-7 h-7" xmlns="http://www.w3.org/2000/svg"
-                         data-name="Layer 1" viewBox="0 0 24 24">
-                        <path
-                                d="M17.34,5.46h0a1.2,1.2,0,1,0,1.2,1.2A1.2,1.2,0,0,0,17.34,5.46Zm4.6,2.42a7.59,7.59,0,0,0-.46-2.43,4.94,4.94,0,0,0-1.16-1.77,4.7,4.7,0,0,0-1.77-1.15,7.3,7.3,0,0,0-2.43-.47C15.06,2,14.72,2,12,2s-3.06,0-4.12.06a7.3,7.3,0,0,0-2.43.47A4.78,4.78,0,0,0,3.68,3.68,4.7,4.7,0,0,0,2.53,5.45a7.3,7.3,0,0,0-.47,2.43C2,8.94,2,9.28,2,12s0,3.06.06,4.12a7.3,7.3,0,0,0,.47,2.43,4.7,4.7,0,0,0,1.15,1.77,4.78,4.78,0,0,0,1.77,1.15,7.3,7.3,0,0,0,2.43.47C8.94,22,9.28,22,12,22s3.06,0,4.12-.06a7.3,7.3,0,0,0,2.43-.47,4.7,4.7,0,0,0,1.77-1.15,4.85,4.85,0,0,0,1.16-1.77,7.59,7.59,0,0,0,.46-2.43c0-1.06.06-1.4.06-4.12S22,8.94,21.94,7.88ZM20.14,16a5.61,5.61,0,0,1-.34,1.86,3.06,3.06,0,0,1-.75,1.15,3.19,3.19,0,0,1-1.15.75,5.61,5.61,0,0,1-1.86.34c-1,.05-1.37.06-4,.06s-3,0-4-.06A5.73,5.73,0,0,1,6.1,19.8,3.27,3.27,0,0,1,5,19.05a3,3,0,0,1-.74-1.15A5.54,5.54,0,0,1,3.86,16c0-1-.06-1.37-.06-4s0-3,.06-4A5.54,5.54,0,0,1,4.21,6.1,3,3,0,0,1,5,5,3.14,3.14,0,0,1,6.1,4.2,5.73,5.73,0,0,1,8,3.86c1,0,1.37-.06,4-.06s3,0,4,.06a5.61,5.61,0,0,1,1.86.34A3.06,3.06,0,0,1,19.05,5,3.06,3.06,0,0,1,19.8,6.1,5.61,5.61,0,0,1,20.14,8c.05,1,.06,1.37.06,4S20.19,15,20.14,16ZM12,6.87A5.13,5.13,0,1,0,17.14,12,5.12,5.12,0,0,0,12,6.87Zm0,8.46A3.33,3.33,0,1,1,15.33,12,3.33,3.33,0,0,1,12,15.33Z"/>
-                    </svg>
-                    <svg class="fill-current text-yellow-500 w-7 h-7" xmlns="http://www.w3.org/2000/svg"
-                         data-name="Layer 1" viewBox="0 0 24 24">
-                        <path
-                                d="M15.12,5.32H17V2.14A26.11,26.11,0,0,0,14.26,2C11.54,2,9.68,3.66,9.68,6.7V9.32H6.61v3.56H9.68V22h3.68V12.88h3.06l.46-3.56H13.36V7.05C13.36,6,13.64,5.32,15.12,5.32Z"/>
-                    </svg>
+                <div class="mt-10">
+                    <a href="/">
+                        <div class="mt-3 flex">
+                            <svg class="fill-current text-white w-7 h-7" xmlns="http://www.w3.org/2000/svg"
+                                 data-name="Layer 1" viewBox="0 0 24 24">
+                                <path
+                                        d="M17.34,5.46h0a1.2,1.2,0,1,0,1.2,1.2A1.2,1.2,0,0,0,17.34,5.46Zm4.6,2.42a7.59,7.59,0,0,0-.46-2.43,4.94,4.94,0,0,0-1.16-1.77,4.7,4.7,0,0,0-1.77-1.15,7.3,7.3,0,0,0-2.43-.47C15.06,2,14.72,2,12,2s-3.06,0-4.12.06a7.3,7.3,0,0,0-2.43.47A4.78,4.78,0,0,0,3.68,3.68,4.7,4.7,0,0,0,2.53,5.45a7.3,7.3,0,0,0-.47,2.43C2,8.94,2,9.28,2,12s0,3.06.06,4.12a7.3,7.3,0,0,0,.47,2.43,4.7,4.7,0,0,0,1.15,1.77,4.78,4.78,0,0,0,1.77,1.15,7.3,7.3,0,0,0,2.43.47C8.94,22,9.28,22,12,22s3.06,0,4.12-.06a7.3,7.3,0,0,0,2.43-.47,4.7,4.7,0,0,0,1.77-1.15,4.85,4.85,0,0,0,1.16-1.77,7.59,7.59,0,0,0,.46-2.43c0-1.06.06-1.4.06-4.12S22,8.94,21.94,7.88ZM20.14,16a5.61,5.61,0,0,1-.34,1.86,3.06,3.06,0,0,1-.75,1.15,3.19,3.19,0,0,1-1.15.75,5.61,5.61,0,0,1-1.86.34c-1,.05-1.37.06-4,.06s-3,0-4-.06A5.73,5.73,0,0,1,6.1,19.8,3.27,3.27,0,0,1,5,19.05a3,3,0,0,1-.74-1.15A5.54,5.54,0,0,1,3.86,16c0-1-.06-1.37-.06-4s0-3,.06-4A5.54,5.54,0,0,1,4.21,6.1,3,3,0,0,1,5,5,3.14,3.14,0,0,1,6.1,4.2,5.73,5.73,0,0,1,8,3.86c1,0,1.37-.06,4-.06s3,0,4,.06a5.61,5.61,0,0,1,1.86.34A3.06,3.06,0,0,1,19.05,5,3.06,3.06,0,0,1,19.8,6.1,5.61,5.61,0,0,1,20.14,8c.05,1,.06,1.37.06,4S20.19,15,20.14,16ZM12,6.87A5.13,5.13,0,1,0,17.14,12,5.12,5.12,0,0,0,12,6.87Zm0,8.46A3.33,3.33,0,1,1,15.33,12,3.33,3.33,0,0,1,12,15.33Z"/>
+                            </svg>
+                            <h1 class="ml-4 text-blase text-white">
+                                iotmaker_offical
+                            </h1>
+                        </div>
+                    </a>
+                    <a href="/">
+                        <div class="mt-3 mr-2 flex">
+                            <svg class="fill-current text-white w-7 h-7" xmlns="http://www.w3.org/2000/svg"
+                                 data-name="Layer 1" viewBox="0 0 24 24">
+                                <path
+                                        d="M15.12,5.32H17V2.14A26.11,26.11,0,0,0,14.26,2C11.54,2,9.68,3.66,9.68,6.7V9.32H6.61v3.56H9.68V22h3.68V12.88h3.06l.46-3.56H13.36V7.05C13.36,6,13.64,5.32,15.12,5.32Z"/>
+                            </svg>
+                            <h1 class="ml-4 text-blase text-white">
+                                iotmaker_offical
+                            </h1>
+                        </div>
+                    </a>
+
                 </div>
             </div>
         </div>
     </transition>
     <div @click="openContact()"
          class="fixed bottom-0 right-0 md:mr-12 mr-4 md:mb-12 mb-6 text-white md:w-2/12 w-4/12 z-10">
-        <img src="circle.png" alt="">
+        <img src="reachout.png" alt="">
     </div>
-
+    <div class="md:w-2/12"></div>
     {{--content--}}
     <div class="flex flex-col md:p-0 md:w-10/12">
         {{--welcoming--}}
@@ -207,7 +230,8 @@
 
             <div v-show="projects == false">
                 <div class="mt-12 w-7/12 md:ml-14 ml-0 w-full md:w-10/12">
-                    <p class="text-gray-300 md:text-lg text-">Smth smth
+                    {{--todo--}}
+                    <p class="text-gray-300 md:text-lg text-">
                     </p>
                 </div>
                 <div class="mt-8 mb-80 md:ml-14 ml-0">
@@ -222,41 +246,41 @@
                               :pagination-active-color="'white'" :pagination-size="6"
                               :per-page-custom="[[480, 1], [768, 1], [1024, 3]]" :navigation-enabled="true">
                         <slide>
-                            <div class="rounded p-4 bg-black opacity-70 mx-2">
+                            <div class="rounded p-4 opacity-70 mx-2">
                                 <img src="bicycle_PNG5374.png" alt="">
-                                <h1 class="text-xl">
+                                <h1 class="text-xl text-yellow-400 mt-3 text-center">
                                     title
                                 </h1>
                             </div>
                         </slide>
                         <slide>
-                            <div class="rounded p-4 bg-black opacity-70 mx-2">
+                            <div class="rounded p-4 opacity-70 mx-2">
                                 <img src="bicycle_PNG5374.png" alt="">
-                                <h1 class="text-xl">
+                                <h1 class="text-xl text-yellow-400 mt-3 text-center">
                                     title
                                 </h1>
                             </div>
                         </slide>
                         <slide>
-                            <div class="rounded p-4 bg-black opacity-70 mx-2">
+                            <div class="rounded p-4 opacity-70 mx-2">
                                 <img src="bicycle_PNG5374.png" alt="">
-                                <h1 class="text-xl">
+                                <h1 class="text-xl text-yellow-400 mt-3 text-center">
                                     title
                                 </h1>
                             </div>
                         </slide>
                         <slide>
-                            <div class="rounded p-4 bg-black opacity-70 mx-2">
+                            <div class="rounded p-4 opacity-70 mx-2">
                                 <img src="bicycle_PNG5374.png" alt="">
-                                <h1 class="text-xl">
+                                <h1 class="text-xl text-yellow-400 mt-3 text-center">
                                     title
                                 </h1>
                             </div>
                         </slide>
                         <slide>
-                            <div class="rounded p-4 bg-black opacity-70 mx-2">
+                            <div class="rounded p-4 opacity-70 mx-2">
                                 <img src="bicycle_PNG5374.png" alt="">
-                                <h1 class="text-xl">
+                                <h1 class="text-xl text-yellow-400 mt-3 text-center">
                                     title
                                 </h1>
                             </div>
@@ -337,7 +361,6 @@
 
                 </div>
 
-
             </div>
         </div>
 
@@ -385,12 +408,16 @@
             </div>
             <div class="flex justify-center w-full bg-black">
                 {{--partner--}}
-                <div class="flex justify-between md:py-8 md:px-12 py-3 px-4 text-white md:w-6/12 w-full">
-                    <div class="md:w-2/12 w-5/12 mx-4">
-                        <img src="mosulspace.png" alt="">
+                <div class="flex self-center justify-center md:py-8 md:px-12 py-3 px-4 text-white md:w-10/12 w-full">
+                    <div class="md:w-1/12 w-4/12 mx-10">
+                        <img src="erbil.png" alt="">
                     </div>
-                    <div class="md:w-3/12 w-6/12">
+                    <div class="md:w-2/12 w-7/12 mx-10">
                         <img src="fieldready.png" alt="">
+                    </div>
+
+                    <div class="md:w-32 w-5/12 mx-10">
+                        <img src="mosulspace.png" alt="">
                     </div>
                 </div>
             </div>
@@ -414,14 +441,11 @@
                         Maker Camp
                     </h1>
                     <h1 class="text-white text-gray-300 md:text-xl text-lg mt-2">
-                        2019-2
+                        2019
                     </h1>
                     <p class="text-gray-300 mt-4 text-sm md:text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam, commodi
-                        consequatur,g
-                        deserunt dicta, fugit ipsam laudantium maiores nam necessitatibus nihil nostrum optio
-                        pariatur
-                        provident recusandae ullam ut veritatis voluptate!
+                        Our Maker Camp event was a great chance to include more people in our passion for using
+                        technology to solve the problems we face.
                     </p>
                 </div>
 
@@ -436,7 +460,7 @@
                         Innovation Day
                     </h1>
                     <h1 class="text-white text-gray-300 md:text-xl text-lg mt-2">
-                        2019-2
+                        2019
                     </h1>
                     <p class="text-gray-300 mt-4 text-sm md:text-base">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam, commodi
@@ -458,14 +482,11 @@
                         3D Modeling Competition
                     </h1>
                     <h1 class="text-white text-gray-300 md:text-xl text-lg mt-2">
-                        2019-2
+                        2020
                     </h1>
                     <p class="text-gray-300 mt-4 text-sm md:text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam, commodi
-                        consequatur,g
-                        deserunt dicta, fugit ipsam laudantium maiores nam necessitatibus nihil nostrum optio
-                        pariatur
-                        provident recusandae ullam ut veritatis voluptate!
+                        We successfully held an online 3d modeling competition where the winner got a chance to win a 3d
+                        printer.
                     </p>
                 </div>
 
@@ -480,29 +501,30 @@
                     Our Team
                 </h1>
             </div>
-            <div class="grid md:grid-cols-3 grid-cols-1 gap-6 justify-items-center w-full bg-black p-4">
-                <div class="flex flex-col w-8/12">
-                    <img src="test.png" alt="">
+            <div class="grid md:grid-cols-3 grid-cols-1 gap-6 justify-items-center w-full bg-black p-4 align-middle">
+
+                <div class="flex flex-col w-7/12">
+                    <img src="mustafa.png" alt="">
                     <h1 class="md:text-3xl text-xl text-white mt-3 text-center">
-                        Sara Falah
+                        Mustafa Alrawi
                     </h1>
                     <h1 class="text-base text-gray-200 mt-1 text-center">
                         Lead Trainer
                     </h1>
                 </div>
-                <div class="flex flex-col w-8/12">
-                    <img src="test.png" alt="">
+                <div class="flex flex-col w-10/12">
+                    <img src="ali.png" alt="">
                     <h1 class="md:text-3xl text-xl text-white mt-3 text-center">
-                        Sara Falah
+                        Ali Taher
                     </h1>
                     <h1 class="text-base text-gray-200 mt-1 text-center">
-                        Lead Trainer
+                        Communication Manager
                     </h1>
                 </div>
-                <div class="flex flex-col w-8/12">
-                    <img src="test.png" alt="">
+                <div class="flex flex-col w-7/12">
+                    <img src="thu.png" alt="">
                     <h1 class="md:text-3xl text-xl text-white mt-3 text-center">
-                        Sara Falah
+                        Thualfikaar
                     </h1>
                     <h1 class="text-base text-gray-200 mt-1 text-center">
                         Lead Trainer
@@ -524,8 +546,6 @@
                     <carousel class="mt-12" autoplay :pagination-color="'#a6a7aa'"
                               :pagination-active-color="'white'" :pagination-size="6"
                               :per-page-custom="[[480, 2], [768, 3], [1024, 4]]">
-                        {{--                        todo--}}
-                        {{--                       add other startups and make dragon breath whiter--}}
                         <slide>
                             <div class="md:w-5/12 w-8/12 opacity-70 self-center">
                                 <img src="startups/Buyut%20Service@3x.png" alt="">
@@ -563,7 +583,7 @@
                         </slide>
                         <slide>
                             <div class="md:w-5/12 w-8/12 opacity-70 self-center">
-                                <img src="startups/drako%20final%20expo.png" alt="">
+                                <img src="startups/iotkids.png" alt="">
                             </div>
                         </slide>
                     </carousel>
