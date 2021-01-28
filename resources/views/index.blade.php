@@ -585,7 +585,7 @@
                         </slide>
                         <slide>
                             <div class="md:w-5/12 w-8/12 opacity-70 self-center">
-                                <img src="startups/iotkids.png" alt="">
+                                <img src="iotkids.png" alt="">
                             </div>
                         </slide>
                     </carousel>
@@ -598,7 +598,7 @@
         <div class="flex flex-wrap justify-center bgbyellow opacity-90 mt-32">
             <div class="w-full p-4">
                 <h1 class="text-white tracking-wide">
-                    hello
+                    IoT Maker 2020
                 </h1>
             </div>
         </div>
