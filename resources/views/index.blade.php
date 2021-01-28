@@ -77,7 +77,7 @@
 </head>
 <body class="bg-shade-black relative overflow-x-hidden max-w-full">
 
-<div id="app" class="flex bg-tools fill-current md:bg-contain bg-no-repeat">
+<div id="app" class="flex bg-tools fill-current md:bg-contain bg-no-repeat" v-cloak>
     {{--gear animation--}}
     <div class="absolute top-0 right-0 md:-mr-36 md:-mt-24 md:w-4/12 w-8/12 -mt-10 -mr-20">
         <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_fm8bpvnl.json" background="transparent"
