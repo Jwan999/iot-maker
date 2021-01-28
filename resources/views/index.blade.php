@@ -235,11 +235,13 @@
                     </p>
                 </div>
                 <div class="mt-8 mb-80 md:ml-14 ml-0">
-                    <a @click="openProjects" class="text-yellow-500 md:text-2xl text-xl hover:text-yellow-400">
+{{--                    @click="openProjects"--}}
+                    <a href="/" class="text-yellow-500 md:text-2xl text-xl hover:text-yellow-400">
                         CHECK OUT WHAT WE DO ->
                     </a>
                 </div>
             </div>
+{{--            todo--}}
             <div v-show="projects">
                 <div class="flex justify-center w-10/12 mt-12 md:ml-14 ml-2 mt-24 mb-32">
                     <carousel autoplay :pagination-color="'#a6a7aa'"
