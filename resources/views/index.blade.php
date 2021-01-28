@@ -143,7 +143,7 @@
     <transition name="slideLeft">
         <div v-show="isOpen ? 'transition duration-500 ease-in-out transform' : ''"
              class="bgblue md:w-4/12 w-10/12 h-screen fixed right-0 z-10">
-            <div class="w-2/12 md:w-3/12 z-10 top-0 left-0 m-4">
+            <div class="w-3/12 md:w-3/12 z-10 top-0 left-0 m-4">
                 <img src="sidepattern.png" alt="">
             </div>
             <div class="flex flex-col w-full p-4">
@@ -173,7 +173,7 @@
                         </button>
                     </div>
                 </form>
-                <div class="mt-10">
+                <div class="md:mt-10 mt-3">
                     <a href="https://www.instagram.com/iotmaker_official/">
                         <div class="mt-3 flex">
                             <svg class="fill-current text-white w-7 h-7" xmlns="http://www.w3.org/2000/svg"
