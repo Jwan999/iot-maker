@@ -73,6 +73,10 @@
         img {
             align-self: flex-start;
         }
+
+        [v-cloak] {
+            display: none;
+        }
     </style>
 </head>
 <body class="bg-shade-black relative overflow-x-hidden max-w-full">
@@ -234,14 +238,19 @@
                     <p class="text-gray-300 md:text-lg text-">
                     </p>
                 </div>
-                <div class="mt-8 mb-80 md:ml-14 ml-0">
-{{--                    @click="openProjects"--}}
+                <div class="flex mt-8 mb-80 md:ml-14 ml-0">
+                    {{--                    @click="openProjects"--}}
                     <a href="/" class="text-yellow-500 md:text-2xl text-xl hover:text-yellow-400">
-                        CHECK OUT WHAT WE DO ->
+                        CHECK OUT WHAT WE DO
                     </a>
+                    <svg class="fill-current text-yellow-500 hover:text-yellow-400 w-9 h-9"
+                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                                d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z"/>
+                    </svg>
                 </div>
             </div>
-{{--            todo--}}
+            {{--            todo--}}
             <div v-show="projects">
                 <div class="flex justify-center w-10/12 mt-12 md:ml-14 ml-2 mt-24 mb-32">
                     <carousel autoplay :pagination-color="'#a6a7aa'"
@@ -421,6 +430,10 @@
                     <div class="md:w-32 w-5/12 mx-10">
                         <img src="mosulspace.png" alt="">
                     </div>
+
+                    <div class="md:w-32 w-5/12 mx-10">
+                        <img src="giz.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -465,11 +478,8 @@
                         2019
                     </h1>
                     <p class="text-gray-300 mt-4 text-sm md:text-base">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam, commodi
-                        consequatur,
-                        deserunt dicta, fugit ipsam laudantium maiores nam necessitatibus nihil nostrum optio
-                        pariaturg
-                        provident recusandae ullam ut veritatis voluptate!
+                        Our students got the opportunity to present their projects and get the feedback they needed as
+                        well as meet other people with te same interests.
                     </p>
                 </div>
 
@@ -511,7 +521,7 @@
                         Mustafa Alrawi
                     </h1>
                     <h1 class="text-base text-gray-200 mt-1 text-center">
-                        Lead Trainer
+                        Finance and Admin
                     </h1>
                 </div>
                 <div class="flex flex-col w-10/12">
@@ -526,10 +536,10 @@
                 <div class="flex flex-col w-7/12">
                     <img src="thu.png" alt="">
                     <h1 class="md:text-3xl text-xl text-white mt-3 text-center">
-                        Thualfikaar
+                        Thulfekar Hameed
                     </h1>
                     <h1 class="text-base text-gray-200 mt-1 text-center">
-                        Lead Trainer
+                        IoT Maker Manager
                     </h1>
                 </div>
             </div>
