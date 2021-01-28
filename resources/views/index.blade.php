@@ -208,7 +208,7 @@
         </div>
     </transition>
     <div @click="openContact()"
-         class="fixed bottom-0 right-0 md:mr-12 mr-4 md:mb-12 mb-6 text-white md:w-2/12 w-4/12 z-10">
+         class="fixed bottom-0 right-0 md:mr-12 mr-4 md:mb-12 mb-6 text-white md:w-2/12 w-5/12 z-10">
         <img src="reachout.png" alt="">
     </div>
     <div class="md:w-2/12"></div>
@@ -418,7 +418,7 @@
                 </h1>
             </div>
             <div class="flex justify-center">
-                <div class="bg-gray-200 p-8 mb-6 rounded opacity-85 w-6/12">
+                <div class="bg-gray-200 p-8 mb-6 rounded opacity-85 md:w-6/12 w-10/12">
                     <div class="self-center">
                         <img src="giz copy.png" alt="">
                     </div>
@@ -428,14 +428,14 @@
                 {{--partner--}}
 
                 <div class="flex self-center justify-center md:py-8 md:px-12 py-3 px-4 text-white md:w-10/12 w-full">
-                    <div class="md:w-1/12 w-4/12 mx-10">
+                    <div class="md:w-1/12 w-4/12 md:mx-10 mx-2">
                         <img src="erbil.png" alt="">
                     </div>
-                    <div class="md:w-2/12 w-7/12 mx-10">
+                    <div class="md:w-2/12 w-7/12 md:mx-10 mx-2">
                         <img src="fieldready.png" alt="">
                     </div>
 
-                    <div class="md:w-32 w-5/12 mx-10">
+                    <div class="md:w-32 w-5/12 md:mx-10 mx-2">
                         <img src="mosulspace.png" alt="">
                     </div>
 
@@ -448,7 +448,7 @@
         <div id="activities" class="scrollspy activities flex flex-wrap justify-center w-full mt-32">
             <div class="w-full text-center">
                 <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
-                    What we've been up to
+                    What we've organized
                 </h1>
             </div>
 
