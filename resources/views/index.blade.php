@@ -417,8 +417,16 @@
                     Our Partners
                 </h1>
             </div>
+            <div class="flex justify-center">
+                <div class="bg-gray-200 p-8 mb-6 rounded opacity-85 w-6/12">
+                    <div class="self-center">
+                        <img src="giz copy.png" alt="">
+                    </div>
+                </div>
+            </div>
             <div class="flex justify-center w-full bg-black">
                 {{--partner--}}
+
                 <div class="flex self-center justify-center md:py-8 md:px-12 py-3 px-4 text-white md:w-10/12 w-full">
                     <div class="md:w-1/12 w-4/12 mx-10">
                         <img src="erbil.png" alt="">
@@ -431,9 +439,6 @@
                         <img src="mosulspace.png" alt="">
                     </div>
 
-                    <div class="md:w-32 w-5/12 mx-10">
-                        <img src="giz.png" alt="">
-                    </div>
                 </div>
             </div>
         </div>
