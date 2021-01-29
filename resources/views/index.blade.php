@@ -318,7 +318,7 @@
                         <h1 class="text-white text-4xl">
                             Mission
                         </h1>
-                        <p class="text-xl text-gray-300 mt-6">
+                        <p class="text-xl text-gray-300 mt-6 text-justify">
                             Our co-working space is a true representation of a collaborative environment where people
                             can
                             get comfortable with innovation.
@@ -337,7 +337,7 @@
                         <h1 class="text-white text-4xl">
                             Vision
                         </h1>
-                        <p class="text-xl text-gray-300 mt-6">
+                        <p class="text-xl text-gray-300 mt-6 text-justify">
                             With the help of a group consisted of talented and motivated trainers we provide a wide
                             variety
                             of technical courses and
@@ -358,7 +358,7 @@
                         <h1 class="text-white text-4xl">
                             Passion
                         </h1>
-                        <p class="text-xl text-gray-300 mt-6">
+                        <p class="text-xl text-gray-300 mt-6 text-justify">
                             We are here to share the passion of creating with you, you can learn how to use
                             materials as well as build cool projects.
                             Imagine DIY meets education! Maker Space is a place where you can launch your creativity and
