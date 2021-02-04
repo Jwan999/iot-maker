@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="/css/app.css" rel="stylesheet">
     <link href="/fonts/avantgarde-bk-bt/avantgarde.css" rel="stylesheet">
+    <meta name="yandex-verification" content="0ad382af5a348276"/>
 
     <link rel="icon" href="IoTLogo.png">
 
