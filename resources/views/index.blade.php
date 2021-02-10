@@ -82,9 +82,9 @@
 </head>
 <body class="bg-shade-black relative overflow-x-hidden max-w-full">
 
-<div id="app" class="flex bg-tools fill-current md:bg-contain bg-no-repeat" v-cloak>
+<div id="app" class="flex bg-tools fill-current lg:bg-contain bg-no-repeat" v-cloak>
     {{--gear animation--}}
-    <div class="absolute top-0 right-0 md:-mr-36 md:-mt-24 md:w-4/12 w-8/12 -mt-10 -mr-20">
+    <div class="absolute top-0 right-0 lg:-mr-36 lg:-mt-24 lg:w-4/12 w-8/12 -mt-10 -mr-20">
         <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_fm8bpvnl.json" background="transparent"
                        speed="1"
                        loop autoplay></lottie-player>
@@ -147,8 +147,8 @@
     {{--contact us--}}
     <transition name="slideLeft">
         <div v-show="isOpen ? 'transition duration-500 ease-in-out transform' : ''"
-             class="bgblue md:w-4/12 w-10/12 h-screen fixed right-0 z-10">
-            <div class="w-3/12 md:w-3/12 z-10 top-0 left-0 m-4">
+             class="bgblue lg:w-4/12 w-10/12 h-screen fixed right-0 z-10">
+            <div class="w-3/12 lg:w-3/12 z-10 top-0 left-0 m-4">
                 <img src="sidepattern.png" alt="">
             </div>
             <div class="flex flex-col w-full p-4">
@@ -178,7 +178,7 @@
                         </button>
                     </div>
                 </form>
-                <div class="md:mt-10 mt-3">
+                <div class="lg:mt-10 mt-3">
                     <a href="https://www.instagram.com/iotmaker_official/">
                         <div class="mt-3 flex">
                             <svg class="fill-current text-white w-7 h-7" xmlns="http://www.w3.org/2000/svg"
@@ -209,39 +209,39 @@
         </div>
     </transition>
     <div @click="openContact()"
-         class="fixed bottom-0 right-0 md:mr-12 mr-4 md:mb-12 mb-6 text-white md:w-2/12 w-5/12 z-10">
+         class="fixed bottom-0 right-0 lg:mr-12 mr-4 lg:mb-12 mb-6 text-white lg:w-2/12 w-5/12 z-10">
         <img src="reachout.png" alt="">
     </div>
-    <div class="md:w-2/12"></div>
+    <div class="lg:w-2/12"></div>
     {{--content--}}
-    <div class="flex flex-col md:p-0 md:w-10/12">
+    <div class="flex flex-col lg:p-0 lg:w-10/12">
         {{--welcoming--}}
         <div class="flex flex-col text-white p-3">
-            <div v-show="projects == false" class="w-8/12 md:mt-72 mt-10 md:ml-14 ml-0 content-desktop">
+            <div v-show="projects == false" class="w-8/12 lg:mt-72 mt-10 lg:ml-14 ml-0 content-desktop">
                 <img src="sloganwhite.png" alt="">
             </div>
-            <div v-show="projects == false" class="md:mt-72 mt-32 md:ml-14 ml-0 content-mobile w-full">
+            <div v-show="projects == false" class="lg:mt-72 mt-32 lg:ml-14 ml-0 content-mobile w-full">
                 <img class="mt-14 w-10/12" src="makeyour.png" alt="">
                 <img class="mt-2 w-7/12" src="passion.png" alt="">
             </div>
 
-            <div v-show="projects" class="w-10/12 md:mt-72 mt-10 md:ml-14 ml-0 content-desktop">
+            <div v-show="projects" class="w-10/12 lg:mt-72 mt-10 lg:ml-14 ml-0 content-desktop">
                 <img src="What%20our%20passion%20made.png" alt="">
             </div>
-            <div v-show="projects" class="md:mt-72 mt-32 md:ml-14 ml-0 content-mobile w-full">
+            <div v-show="projects" class="lg:mt-72 mt-32 lg:ml-14 ml-0 content-mobile w-full">
                 <img class="mt-14 w-9/12" src="whatour.png" alt="">
                 <img class="mt-2 w-10/12" src="passionmade.png" alt="">
             </div>
 
             <div v-show="projects == false">
-                <div class="mt-12 w-7/12 md:ml-14 ml-0 w-full md:w-10/12">
+                <div class="mt-12 w-7/12 lg:ml-14 ml-0 w-full lg:w-10/12">
                     {{--todo--}}
-                    <p class="text-gray-300 md:text-lg text-">
+                    <p class="text-gray-300 lg:text-lg text-">
                     </p>
                 </div>
-                <div class="flex mt-8 mb-80 md:ml-14 ml-0">
+                <div class="flex mt-8 mb-80 lg:ml-14 ml-0">
                     {{--                    @click="openProjects"--}}
-                    <a href="/" class="text-yellow-500 md:text-2xl text-xl hover:text-yellow-400">
+                    <a href="/" class="text-yellow-500 lg:text-2xl text-xl hover:text-yellow-400">
                         CHECK OUT WHAT WE DO
                     </a>
                     <svg class="fill-current text-yellow-500 hover:text-yellow-400 w-9 h-9"
@@ -253,7 +253,7 @@
             </div>
             {{--            todo--}}
             <div v-show="projects">
-                <div class="flex justify-center w-10/12 mt-12 md:ml-14 ml-2 mt-24 mb-32">
+                <div class="flex justify-center w-10/12 mt-12 lg:ml-14 ml-2 mt-24 mb-32">
                     <carousel autoplay :pagination-color="'#a6a7aa'"
                               :pagination-active-color="'white'" :pagination-size="6"
                               :per-page-custom="[[480, 1], [768, 1], [1024, 3]]" :navigation-enabled="true">
@@ -306,16 +306,16 @@
 
         {{--we offer--}}
 
-        <div id="offers" class="scrollspy offers flex flex-wrap justify-center md:mt-80 mt-10 p-4">
-            <div class="w-full text-start md:mx-16 mx-0">
-                <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
+        <div id="offers" class="offers flex flex-wrap justify-center lg:mt-40 mt-20 p-4">
+            <div class="w-full text-start lg:mx-16 mx-0">
+                <h1 class="text-white text-4xl tracking-wide lg:mb-32 mb-24">
                     Get to know IoT Maker
                 </h1>
             </div>
-            <div class="flex flex-col justify-center w-full md:m-4 m-0">
-                <div class="flex md:flex-row flex-col-reverse justify-around md:mx-4 mx-0">
+            <div class="flex flex-col justify-center w-full lg:m-4 m-0">
+                <div class="flex lg:flex-row flex-col-reverse justify-around lg:mx-4 mx-0">
 
-                    <div class="flex flex-col md:w-7/12 w-full md:mt-0 mt-6">
+                    <div class="flex flex-col lg:w-7/12 w-full lg:mt-0 mt-6">
                         <h1 class="text-white text-4xl">
                             Mission
                         </h1>
@@ -327,14 +327,14 @@
                         </p>
                     </div>
 
-                    <div class="md:w-3/12 w:10/12 flex justify-center">
+                    <div class="lg:w-3/12 w:10/12 flex justify-center">
                         <img src="coworking.png" alt="">
                     </div>
 
                 </div>
-                <div class="flex md:flex-row flex-col-reverse justify-around md:mx-4 mx-0 mt-10">
+                <div class="flex lg:flex-row flex-col-reverse justify-around lg:mx-4 mx-0 mt-10">
 
-                    <div class="flex flex-col md:w-7/12 w-full md:mt-0 mt-6">
+                    <div class="flex flex-col lg:w-7/12 w-full lg:mt-0 mt-6">
                         <h1 class="text-white text-4xl">
                             Vision
                         </h1>
@@ -348,14 +348,14 @@
                         </p>
                     </div>
 
-                    <div class="md:w-3/12 w:10/12 flex justify-center">
+                    <div class="lg:w-3/12 w:10/12 flex justify-center">
                         <img src="learn.png" alt="">
                     </div>
 
                 </div>
-                <div class="flex md:flex-row flex-col-reverse justify-around md:mx-4 mx-0 mt-10">
+                <div class="flex lg:flex-row flex-col-reverse justify-around lg:mx-4 mx-0 mt-10">
 
-                    <div class="flex flex-col md:w-7/12 w-full md:mt-0 mt-6">
+                    <div class="flex flex-col lg:w-7/12 w-full lg:mt-0 mt-6">
                         <h1 class="text-white text-4xl">
                             Passion
                         </h1>
@@ -367,7 +367,7 @@
                         </p>
                     </div>
 
-                    <div class="md:w-3/12 w-9/12 flex justify-center self-center md:-mr-0 -mr-4">
+                    <div class="lg:w-3/12 w-9/12 flex justify-center self-center lg:-mr-0 -mr-4">
                         <img class="w-10/12" src="workshop.png" alt="">
                     </div>
 
@@ -378,15 +378,15 @@
 
         {{--space--}}
 
-        <div id="space" class="scrollspy space flex flex-wrap justify-center mt-32 p-4">
+        <div id="space" class="space flex flex-wrap justify-center mt-32 p-4">
             <div class="w-full text-center">
-                <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
+                <h1 class="text-white text-4xl tracking-wide lg:mb-32 mb-24">
                     Our Space
                 </h1>
             </div>
-            <div class="grid md:grid-cols-2 grid-cols-1 gap-6 justify-items-center">
-                <div class="bg-black rounded p-6 flex flex-col justify-center md:w-10/12 w-full">
-                    <img class="m-2 md:w-8/12 w-full self-center" src="bigspace%20copy.png" alt="">
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-6 justify-items-center">
+                <div class="bg-black rounded p-6 flex flex-col justify-center lg:w-10/12 w-full">
+                    <img class="m-2 lg:w-8/12 w-full self-center" src="bigspace%20copy.png" alt="">
                     <h1 class="text-white text-2xl mt-3">
                         Co-working Space
                     </h1>
@@ -396,8 +396,8 @@
                         branding or even a place to facilitate meetings
                     </p>
                 </div>
-                <div class="bg-black rounded p-6 flex flex-col justify-items-center md:w-10/12 w-full">
-                    <img class="m-2 md:w-6/12 w-full self-center" src="makerspace.png" alt="">
+                <div class="bg-black rounded p-6 flex flex-col justify-items-center lg:w-10/12 w-full">
+                    <img class="m-2 lg:w-6/12 w-full self-center" src="makerspace.png" alt="">
                     <h1 class="text-white text-2xl mt-3">
                         Maker Space
                     </h1>
@@ -412,14 +412,14 @@
 
         {{--partners--}}
 
-        <div id="partners" class="scrollspy partners flex flex-wrap justify-center mt-32">
+        <div id="partners" class="partners flex flex-wrap justify-center mt-32">
             <div class="w-full text-center">
-                <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
+                <h1 class="text-white text-4xl tracking-wide lg:mb-32 mb-24">
                     Our Partners
                 </h1>
             </div>
             <div class="flex justify-center">
-                <div class="bg-gray-200 p-8 mb-6 rounded opacity-85 md:w-6/12 w-10/12">
+                <div class="bg-gray-200 p-8 mb-6 rounded opacity-85 lg:w-6/12 w-10/12">
                     <div class="self-center">
                         <img src="giz copy.png" alt="">
                     </div>
@@ -428,15 +428,15 @@
             <div class="flex justify-center w-full bg-black">
                 {{--partner--}}
 
-                <div class="flex self-center justify-center md:py-8 md:px-12 py-3 px-4 text-white md:w-10/12 w-full">
-                    <div class="md:w-1/12 w-4/12 md:mx-10 mx-2">
+                <div class="flex self-center justify-center lg:py-8 lg:px-12 py-3 px-4 text-white lg:w-10/12 w-full">
+                    <div class="lg:w-1/12 w-4/12 lg:mx-10 mx-2">
                         <img src="erbil.png" alt="">
                     </div>
-                    <div class="md:w-2/12 w-7/12 md:mx-10 mx-2">
+                    <div class="lg:w-2/12 w-7/12 lg:mx-10 mx-2">
                         <img src="fieldready.png" alt="">
                     </div>
 
-                    <div class="md:w-32 w-5/12 md:mx-10 mx-2">
+                    <div class="lg:w-32 w-5/12 lg:mx-10 mx-2">
                         <img src="mosulspace.png" alt="">
                     </div>
 
@@ -446,25 +446,25 @@
 
         {{--activities--}}
 
-        <div id="activities" class="scrollspy activities flex flex-wrap justify-center w-full mt-32">
-            <div class="w-full text-center">
-                <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
+        <div id="activities" class="activities flex flex-wrap justify-center w-full mt-32">
+            <div class="w-full mx-1 text-center">
+                <h1 class="text-white text-4xl tracking-wide lg:mb-32 mb-24">
                     What we've organized
                 </h1>
             </div>
 
-            <div class="flex flex-col md:w-10/12 w-full m-4">
+            <div class="flex flex-col lg:w-10/12 w-full m-4">
 
-                <img class="md:w-9/12 w-full self-center md:-ml-52 -ml-0" src="makercamp.png" alt="">
+                <img class="lg:w-9/12 w-full self-center lg:-ml-52 -ml-0" src="makercamp.png" alt="">
 
-                <div class="md:w-10/12 w-full p-4 bg-black md:-mt-20 -mt-10 md:ml-72 ml-0 opacity-90 rounded self-center">
-                    <h1 class="text-white md:text-4xl text-xl">
+                <div class="lg:w-10/12 w-full p-4 bg-black lg:-mt-20 -mt-10 lg:ml-72 ml-0 opacity-90 rounded self-center">
+                    <h1 class="text-white lg:text-4xl text-xl">
                         Maker Camp
                     </h1>
-                    <h1 class="text-white text-gray-300 md:text-xl text-lg mt-2">
+                    <h1 class="text-white text-gray-300 lg:text-xl text-lg mt-2">
                         2019
                     </h1>
-                    <p class="text-gray-300 mt-4 text-sm md:text-base">
+                    <p class="text-gray-300 mt-4 text-sm lg:text-base">
                         Our Maker Camp event was a great chance to include more people in our passion for using
                         technology to solve the problems we face.
                     </p>
@@ -472,18 +472,18 @@
 
             </div>
 
-            <div class="flex flex-col md:w-11/12 w-full m-4">
+            <div class="flex flex-col lg:w-11/12 w-full m-4">
 
-                <img class="md:w-8/12 w-11/12 self-center md:-mr-80 -ml-0" src="innovationdat.png" alt="">
+                <img class="lg:w-8/12 w-11/12 self-center lg:-mr-80 -ml-0" src="innovationdat.png" alt="">
 
-                <div class="md:w-8/12 w-full p-4 bg-black md:-mt-20 -mt-10 md:ml-24 ml-0 opacity-90 rounded">
-                    <h1 class="text-white md:text-4xl text-xl">
+                <div class="lg:w-8/12 w-full p-4 bg-black lg:-mt-20 -mt-10 lg:ml-24 ml-0 opacity-90 rounded">
+                    <h1 class="text-white lg:text-4xl text-xl">
                         Innovation Day
                     </h1>
-                    <h1 class="text-white text-gray-300 md:text-xl text-lg mt-2">
+                    <h1 class="text-white text-gray-300 lg:text-xl text-lg mt-2">
                         2019
                     </h1>
-                    <p class="text-gray-300 mt-4 text-sm md:text-base">
+                    <p class="text-gray-300 mt-4 text-sm lg:text-base">
                         Our students got the opportunity to present their projects and get the feedback they needed as
                         well as meet other people with te same interests.
                     </p>
@@ -491,18 +491,18 @@
 
             </div>
 
-            <div class="flex flex-col md:w-10/12 w-full m-4">
+            <div class="flex flex-col lg:w-10/12 w-full m-4">
 
-                <img class="md:w-9/12 w-full self-center md:-ml-52 -ml-0" src="3d.png" alt="">
+                <img class="lg:w-9/12 w-full self-center lg:-ml-52 -ml-0" src="3d.png" alt="">
 
-                <div class="md:w-10/12 w-full p-4 bg-black md:-mt-20 -mt-10 md:ml-72 ml-0 opacity-90 rounded self-center">
-                    <h1 class="text-white md:text-4xl text-xl">
+                <div class="lg:w-10/12 w-full p-4 bg-black lg:-mt-20 -mt-10 lg:ml-72 ml-0 opacity-90 rounded self-center">
+                    <h1 class="text-white lg:text-4xl text-xl">
                         3D Modeling Competition
                     </h1>
-                    <h1 class="text-white text-gray-300 md:text-xl text-lg mt-2">
+                    <h1 class="text-white text-gray-300 lg:text-xl text-lg mt-2">
                         2020
                     </h1>
-                    <p class="text-gray-300 mt-4 text-sm md:text-base">
+                    <p class="text-gray-300 mt-4 text-sm lg:text-base">
                         We successfully held an online 3d modeling competition where the winner got a chance to win a 3d
                         printer.
                     </p>
@@ -513,17 +513,17 @@
 
         {{--team--}}
 
-        <div id="team" class="scrollspy team flex flex-wrap justify-center mt-32">
+        <div id="team" class="team flex flex-wrap justify-center mt-32">
             <div class="w-full text-center">
-                <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
+                <h1 class="text-white text-4xl tracking-wide lg:mb-32 mb-24">
                     Our Team
                 </h1>
             </div>
-            <div class="grid md:grid-cols-4 grid-cols-1 gap-12 justify-items-center w-full bg-black lg:p-6 p-10 align-middle">
+            <div class="grid lg:grid-cols-4 grid-cols-1 gap-12 justify-items-center w-full bg-black lg:p-6 p-10 align-middle">
 
                 <div class="flex flex-col">
                     <img src="team/mustafa.png" alt="">
-                    <h1 class="md:text-3xl text-xl text-white mt-3 text-center">
+                    <h1 class="lg:text-3xl text-xl text-white mt-3 text-center">
                         Mustafa Alrawi
                     </h1>
                     <h1 class="text-base text-gray-200 mt-1 text-center">
@@ -532,7 +532,7 @@
                 </div>
                 <div class="flex flex-col">
                     <img src="team/ali.png" alt="">
-                    <h1 class="md:text-3xl text-xl text-white mt-3 text-center">
+                    <h1 class="lg:text-3xl text-xl text-white mt-3 text-center">
                         Ali Taher
                     </h1>
                     <h1 class="text-base text-gray-200 mt-1 text-center">
@@ -541,7 +541,7 @@
                 </div>
                 <div class="flex flex-col">
                     <img src="team/thulfekar.png" alt="">
-                    <h1 class="md:text-3xl text-xl text-white mt-3 text-center">
+                    <h1 class="lg:text-3xl text-xl text-white mt-3 text-center">
                         Thulfekar Hameed
                     </h1>
                     <h1 class="text-base text-gray-200 mt-1 text-center">
@@ -551,7 +551,7 @@
 
                 <div class="flex flex-col">
                     <img src="team/hamsa.png" alt="">
-                    <h1 class="md:text-3xl text-xl text-white mt-3 text-center">
+                    <h1 class="lg:text-3xl text-xl text-white mt-3 text-center">
                         Hamsa Muhanad
                     </h1>
                     <h1 class="text-base text-gray-200 mt-1 text-center">
@@ -560,7 +560,7 @@
                 </div>
                 <div class="flex flex-col">
                     <img src="team/saif.png" alt="">
-                    <h1 class="md:text-3xl text-xl text-white mt-3 text-center">
+                    <h1 class="lg:text-3xl text-xl text-white mt-3 text-center">
                         Saif AL Attar
                     </h1>
                     <h1 class="text-base text-gray-200 mt-1 text-center">
@@ -569,7 +569,7 @@
                 </div>
                 <div class="flex flex-col">
                     <img src="team/sara.png" alt="">
-                    <h1 class="md:text-3xl text-xl text-white mt-3 text-center">
+                    <h1 class="lg:text-3xl text-xl text-white mt-3 text-center">
                         Sara Luay
                     </h1>
                     <h1 class="text-base text-gray-200 mt-1 text-center">
@@ -578,7 +578,7 @@
                 </div>
                 <div class="flex flex-col">
                     <img src="team/ibraheem.png" alt="">
-                    <h1 class="md:text-3xl text-xl text-white mt-3 text-center">
+                    <h1 class="lg:text-3xl text-xl text-white mt-3 text-center">
                         Ibraheem Kareem
                     </h1>
                     <h1 class="text-base text-gray-200 mt-1 text-center">
@@ -587,7 +587,7 @@
                 </div>
                 <div class="flex flex-col">
                     <img src="team/orjuwan.png" alt="">
-                    <h1 class="md:text-3xl text-xl text-white mt-3 text-center">
+                    <h1 class="lg:text-3xl text-xl text-white mt-3 text-center">
                         Orjuwan Dakhil
                     </h1>
                     <h1 class="text-base text-gray-200 mt-1 text-center">
@@ -599,9 +599,9 @@
 
         {{--startups--}}
 
-        <div id="startups" class="scrollspy startups flex flex-wrap justify-center mt-32">
+        <div id="startups" class="startups flex flex-wrap justify-center mt-32">
             <div class="w-full text-center">
-                <h1 class="text-white text-4xl tracking-wide md:mb-32 mb-24">
+                <h1 class="text-white text-4xl tracking-wide lg:mb-32 mb-24">
                     Our Startup Community
                 </h1>
             </div>
@@ -611,42 +611,42 @@
                               :pagination-active-color="'white'" :pagination-size="6"
                               :per-page-custom="[[480, 2], [768, 3], [1024, 4]]">
                         <slide>
-                            <div class="md:w-5/12 w-8/12 opacity-70 self-center">
+                            <div class="lg:w-5/12 w-8/12 opacity-70 self-center">
                                 <img src="startups/Buyut%20Service@3x.png" alt="">
                             </div>
                         </slide>
                         <slide>
-                            <div class="md:w-5/12 w-8/12 opacity-70 self-center">
+                            <div class="lg:w-5/12 w-8/12 opacity-70 self-center">
                                 <img src="startups/رحلات.png" alt="">
                             </div>
                         </slide>
                         <slide>
-                            <div class="md:w-2/12 w-3/12 opacity-70 self-center">
+                            <div class="lg:w-2/12 w-3/12 opacity-70 self-center">
                                 <img src="startups/RE-FOCUS%20LOGO.png" alt="">
                             </div>
                         </slide>
                         <slide>
-                            <div class="md:w-5/12 w-8/12 opacity-70 self-center">
+                            <div class="lg:w-5/12 w-8/12 opacity-70 self-center">
                                 <img src="startups/painterchy%20logo.png" alt="">
                             </div>
                         </slide>
                         <slide>
-                            <div class="md:w-5/12 w-8/12 opacity-70 self-center">
+                            <div class="lg:w-5/12 w-8/12 opacity-70 self-center">
                                 <img src="startups/logo1%20work%20wp%20(2)%20copy.png" alt="">
                             </div>
                         </slide>
                         <slide>
-                            <div class="md:w-5/12 w-8/12 opacity-70 self-center">
+                            <div class="lg:w-5/12 w-8/12 opacity-70 self-center">
                                 <img src="startups/logo%20Kursi.png" alt="">
                             </div>
                         </slide>
                         <slide>
-                            <div class="md:w-5/12 w-8/12 opacity-70 self-center">
+                            <div class="lg:w-5/12 w-8/12 opacity-70 self-center">
                                 <img src="startups/Farha.png" alt="">
                             </div>
                         </slide>
                         <slide>
-                            <div class="md:w-5/12 w-8/12 opacity-70 self-center">
+                            <div class="lg:w-5/12 w-8/12 opacity-70 self-center">
                                 <img src="iotkids.png" alt="">
                             </div>
                         </slide>
