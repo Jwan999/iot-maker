@@ -27,7 +27,6 @@
             <a href="#offers"
                class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">What We
                 Offer</a>
-
             <a href="#space"
                class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">Our
                 Space</a>
