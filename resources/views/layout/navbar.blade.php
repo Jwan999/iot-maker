@@ -1,9 +1,9 @@
 <div
-    class="flex z-10 lg:flex-row flex-col justify-between my-4 lg:mx-4 mx-2 py-6 px-4 rounded bg-black bg-opacity-70 text-gray-400">
+    class="flex z-10 lg:flex-row flex-col justify-between my-4 lg:mx-4 mx-2 py-6 px-4 rounded bg-black bg-opacity-70 text-gray-300">
     <div class="flex items-center justify-between text-white">
-        <h1 class=" text-white font-bold text-xl">
+        <a href="/" class=" text-white font-bold text-xl">
             IoT Maker
-        </h1>
+        </a>
         <div @click="toggleNavbar()" class="lg:hidden flex">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                  class="fill-current text-white h-7 w-7">
@@ -28,20 +28,22 @@
                class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">What We
                 Offer</a>
             <a href="#space"
-               class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">Our
+               class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">
                 Space</a>
             <a href="#partners"
-               class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">Our
+               class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">
                 Partners</a>
             <a href="#activities"
-               class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">Our
+               class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">
                 Activities</a>
             <a href="#team"
-               class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">Our Team</a>
-            <a href="#startups"
-               class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">Our Startups
-                Community</a>
+               class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">Team</a>
+
         </scrollactive>
+
+        <a href="/community"
+           class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl lg:ml-6 ml-0 lg:mt-0 mt-6">
+            Community</a>
     </div>
 
 </div>

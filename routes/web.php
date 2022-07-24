@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GeneralController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [GeneralController::class, 'showHome']);
+
+Route::get('/community', [GeneralController::class, 'showStartups']);
 
 Route::post('/contact', '\App\Http\Controllers\ContactController@store');
 Route::get('google - analytics - summary', array('as' => 'google - analytics - summary', 'uses' => 'HomeController@getAnalyticsSummary'));

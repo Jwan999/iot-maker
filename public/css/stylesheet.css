@@ -1,0 +1,143 @@
+body {
+    font-family: 'Avant Garde Book BT';
+    /*overflow-x: hidden;*/
+}
+
+html, body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.bg-shade-black {
+    background-color: #0d0e11;
+}
+
+.bg- {
+    background-color: #050505;
+}
+
+.bgblue {
+    background-color: #307ABA;
+}
+
+.bgbyellow {
+    background-color: #F39E19;
+}
+
+.content-desktop {
+    display: initial;
+}
+
+.content-mobile {
+    display: none;
+}
+
+.bg-tools {
+    background-image: url("/bgtools.png");
+    object-fit: scale-down;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .content-desktop {
+        display: none;
+    }
+
+    .content-mobile {
+        display: initial;
+    }
+}
+
+.side-menu .active {
+    color: white;
+}
+
+.mobile-menu .active {
+    color: #F39E19
+}
+
+img {
+    align-self: flex-start;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+.contact {
+    float: end;
+    bottom: 0;
+    position: fixed;
+}
+
+.flip:dir(rtl) {
+    /*-webkit-transform: scaleX(-1);*/
+    /*transform: scaleX(-1);*/
+}
+
+.sticky-element {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+/*startups slideshow*/
+.scroll-bar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.scroll-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.slideshow {
+    /*height: 200px;*/
+    /*max-width: 100%;*/
+    /*margin: 0 auto;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    /*transform: translate3d(0, 0, 0);*/
+}
+
+.slideshow > div {
+    /*height: 200px;*/
+    /*width: 100%;*/
+    /*position: absolute;*/
+    /*display: flex;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*height: 100%;*/
+    /*transform: translate3d(0, 0, 0);*/
+}
+
+/*.slideshow .logos {*/
+/*    animation: moveSlideshow 5s linear infinite;*/
+/*}*/
+
+/*@keyframes moveSlideshow {*/
+/*    100% {*/
+/*        transform: translateX(-66.6666%);*/
+/*    }*/
+/*}*/
+
+
+
+
+/*keyframe animations*/
+.first {
+    animation: bannermove 20s linear infinite;
+}
+
+@keyframes bannermove {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: -2125px;
+    }
+
+}
+
+
