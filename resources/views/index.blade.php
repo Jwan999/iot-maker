@@ -244,7 +244,7 @@
             getStartups() {
                 axios.get('https://iotmaker.makershive.org/api/startups').then(response => {
                     this.startups = response.data
-                    console.log(this.startups)
+                    // console.log(this.startups)
                 })
             },
             toggleNavbar() {

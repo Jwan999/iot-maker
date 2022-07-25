@@ -1,7 +1,7 @@
 @extends('index')
 @section('content')
 
-    <div class="flex justify-center w-full flex-col startupsBG bg-center bg-no-repeat lg:p-0">
+    <div class="flex justify-center w-full flex-col bg-startups bg-center bg-no-repeat lg:p-0">
         {{--navbar--}}
         @include('layout.navbar')
 
