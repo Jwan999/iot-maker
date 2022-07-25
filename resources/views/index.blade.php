@@ -242,7 +242,7 @@
         },
         methods: {
             getStartups() {
-                axios.get('http://iotmaker.makershive.org/api/startups').then(response => {
+                axios.get('https://iotmaker.makershive.org/api/startups').then(response => {
                     this.startups = response.data
                     console.log(this.startups)
                 })
