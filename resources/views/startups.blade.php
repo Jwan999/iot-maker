@@ -1,11 +1,20 @@
 @extends('index')
 @section('content')
 
-    <div class="flex justify-center w-full flex-col lg:p-0">
+    <div class="flex justify-center w-full flex-col startupsBG bg-center bg-no-repeat lg:p-0">
         {{--navbar--}}
         @include('layout.navbar')
 
         <div id="startup">
+            <div class="flex justify-center">
+                <div class="text-center text-white my-14 w-6/12">
+                    <h1 class="text-3xl mb-6 text-orange">IoT Maker Community</h1>
+                    <p class="text-gray-300 text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto aspernatur aut cum cumque
+                        deleniti deserunt dignissimos excepturi id ipsa, magni modi molestiae, mollitia nam nesciunt odit
+                        possimus quidem reprehenderit!z</p>
+                </div>
+            </div>
+
             <div class="container">
                 <div id="timeline">
 

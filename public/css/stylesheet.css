@@ -3,13 +3,21 @@ body {
     /*overflow-x: hidden;*/
 }
 
+.startupsBG{
+    background-image: url("/startupsBG.png");
+    /*object-fit: scale-down;*/
+    /*object-fit: cover;*/
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 html, body {
     position: relative;
     overflow-x: hidden;
 }
 
 .bg-shade-black {
-    background-color: #0d0e11;
+    background-color: #131316;
 }
 
 .bg- {
@@ -22,6 +30,10 @@ html, body {
 
 .bgbyellow {
     background-color: #F39E19;
+}
+
+.text-orange {
+    color: #F39E19
 }
 
 .content-desktop {
@@ -121,8 +133,6 @@ img {
 /*        transform: translateX(-66.6666%);*/
 /*    }*/
 /*}*/
-
-
 
 
 /*keyframe animations*/
