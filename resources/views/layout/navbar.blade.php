@@ -36,7 +36,7 @@
             <a href="#activities"
                class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">
                 Activities</a>
-            <a href="#team"
+            <a href="https://iotmaker.org/#team"
                class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">Team</a>
 
         </scrollactive>
