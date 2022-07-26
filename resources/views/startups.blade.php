@@ -9,11 +9,13 @@
             <div class="flex justify-center">
                 <div class="text-center text-white my-14 lg:w-6/12 w-10/12">
                     <h1 class="text-3xl mb-6 text-orange">IoT Maker Start-ups Community</h1>
-                    <p class="text-gray-300 text-lg lg:text-center text-justify">Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Alias architecto aspernatur aut cum cumque
-                        deleniti deserunt dignissimos excepturi id ipsa, magni modi molestiae, mollitia nam nesciunt
-                        odit
-                        possimus quidem reprehenderit!z</p>
+                    <p class="text-gray-300 text-lg lg:text-center text-justify">Since we've opened our space, we've
+                        welcomed twenty-two startups
+                        Those startups are making a positive impact on the Iraqi community. Likewise, we are looking for
+                        ways to help them.
+                        <br>
+                        Take your time getting to know them
+                    </p>
                 </div>
             </div>
 
