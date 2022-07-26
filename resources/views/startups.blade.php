@@ -8,8 +8,8 @@
         <div id="startup">
             <div class="flex justify-center">
                 <div class="text-center text-white my-14 lg:w-6/12 w-10/12">
-                    <h1 class="text-3xl mb-6 text-orange">IoT Maker Start-ups Community</h1>
-                    <p class="text-gray-300 text-lg lg:text-center text-justify">Since we've opened our space, we've
+                    <h1 class="text-3xl mb-6 text-orange"> IoT Maker Start-ups Community</h1>
+                    <p class="text-gray-300 text-lg text-center">Since we've opened our space, we've
                         welcomed twenty-two startups
                         Those startups are making a positive impact on the Iraqi community. Likewise, we are looking for
                         ways to help them.
@@ -28,7 +28,8 @@
                         </div>
                         <div class="timeline-content" :class="index % 2 == 0 ? 'right' : ''">
                             <div class="w-full flex justify-center">
-                                <img class="h-28 object-scale-down py-2"
+                                <img class="h-28 object-scale-down my-4"
+                                     :class="startup.id == 13 || startup.id == 19 || startup.id == 6 || startup.id == 5 ? 'py-6' : 'py-0'"
                                      :src="'http://iotmaker.makershive.org/storage/'+startup.logo" alt="">
                             </div>
 
