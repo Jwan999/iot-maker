@@ -44,7 +44,7 @@
     <div class="p-10 bg-black rounded">
         <h1 class="text-5xl font-bold text-orange font-bold text-center">@{{startupsCount}}+</h1>
         <h1 class="text-white text-xl text-center">
-            Startups registered
+            Startups supported
         </h1>
 
         <p class="text-lg text-gray-200 mt-6 text-justify">Our co-working space is a true representation of a
