@@ -1,7 +1,7 @@
 <div id="partners" class="partners flex flex-wrap justify-center mt-32">
     <div class="w-full text-center">
         <h1 class="text-white text-4xl tracking-wide lg:mb-32 mb-24">
-            Our Partners
+            Partners
         </h1>
     </div>
     <div class="flex justify-center w-full">

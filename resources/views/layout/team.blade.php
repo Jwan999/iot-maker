@@ -1,8 +1,10 @@
 <div id="team" class="team flex flex-wrap justify-center mt-32">
-    <div class="w-full text-center">
-        <h1 class="text-white text-4xl tracking-wide lg:mb-32 mb-24">
-            Our Team
+    <div class="w-full text-center lg:mb-32 mb-24">
+        <h1 class="text-white text-4xl tracking-wide">
+            Team
         </h1>
+        <h1 class="text-center text-orange mt-4">People behind IoT Maker</h1>
+
     </div>
     <div
         class="grid lg:grid-cols-4 grid-cols-1 gap-12 justify-items-center w-full bg-black lg:p-6 p-10 align-middle">

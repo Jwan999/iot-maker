@@ -1,7 +1,7 @@
 <div id="activities" class="activities flex flex-wrap justify-center w-full mt-32">
     <div class="w-full">
         <h1 class="text-white text-center text-4xl tracking-wide lg:mb-32 mb-24">
-            What we've organized
+            Activities We've Organized
         </h1>
     </div>
 

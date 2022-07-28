@@ -3,7 +3,7 @@
         <h1 class="text-white text-4xl tracking-wide ">
             Our Space
         </h1>
-        <h1 class="text-center text-orange mt-4">Every detail has a story.</h1>
+        <h1 class="text-center text-orange mt-4">Where every detail has a story.</h1>
     </div>
 
     <div class="grid grid-rows-3">
