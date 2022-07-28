@@ -1,5 +1,5 @@
 <div
-    class="flex z-10 lg:flex-row flex-col justify-between my-4 lg:mx-4 mx-2 py-6 px-4 rounded bg-white bg-opacity-10 text-gray-300">
+    class="flex z-10 lg:flex-row flex-col justify-between my-4 lg:mx-4 mx-2 py-6 px-4 rounded bg-white bg-opacity-10 text-gray-200">
     <div class="flex items-center justify-between text-white">
         <a href="/" class=" text-white font-bold text-xl">
             IoT Maker

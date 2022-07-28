@@ -32,12 +32,8 @@
             {{--team--}}
             @include('layout.team')
 
-            {{--            --}}{{--startups--}}
-            {{--            @include('startups')--}}
-
 
             {{--footer--}}
-            {{--        mt-32--}}
             <div class="flex flex-wrap justify-center bgbyellow opacity-90 mt-32">
                 <div class="w-full p-4">
                     <h1 class="text-white tracking-wide">
@@ -50,42 +46,5 @@
 
     </div>
 
-
-
-
-
-
-
-
 @endsection
 
-@push('scripts')
-{{--    <script>--}}
-
-{{--        var vue =  new Vue({--}}
-{{--            el: '#app',--}}
-{{--            data: {--}}
-{{--                isOpen: false,--}}
-{{--                projects: false,--}}
-{{--                showNavbar: false,--}}
-{{--            },--}}
-{{--            methods: {--}}
-{{--                toggleNavbar() {--}}
-{{--                    this.showNavbar = !this.showNavbar--}}
-{{--                },--}}
-{{--                openContact() {--}}
-{{--                    this.isOpen = !this.isOpen--}}
-{{--                },--}}
-{{--                openProjects() {--}}
-{{--                    this.projects = true--}}
-{{--                },--}}
-
-{{--            },--}}
-{{--            mounted() {--}}
-
-{{--            },--}}
-{{--        })--}}
-
-{{--    </script>--}}
-
-@endpush

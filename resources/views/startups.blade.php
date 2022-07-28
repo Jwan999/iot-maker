@@ -84,35 +84,6 @@
                 </div>
             </div>
 
-
-            {{--    <div class="w-full text-center">--}}
-            {{--        <h1 class="text-white text-4xl tracking-wide lg:mb-32 mb-24">--}}
-            {{--            Our Startup Community--}}
-            {{--        </h1>--}}
-            {{--    </div>--}}
-
-            {{--    <div class="bg-white my-10 w-full overflow-x-hidden px-20 py-10">--}}
-            {{--        <div class="w-full scroll-bar flex space-x-24 items-center">--}}
-
-            {{--            <img class="first w-32 self-center" src="startups/artna.png?image=1" alt="">--}}
-            {{--            <img class="w-48 self-center" src="startups/asdikaee.png?image=2" alt="">--}}
-            {{--            <img class="w-48 self-center" src="startups/dash&dot.png?image=3" alt="">--}}
-            {{--            <img class="w-16 self-center" src="startups/dhalma.png?image=4" alt="">--}}
-            {{--            <img class="w-24 self-center" src="startups/faya.png?image=5" alt="">--}}
-            {{--            <img class="w-24 self-center" src="startups/influencers.png?image=6" alt="">--}}
-            {{--            <img class="w-32 self-center" src="startups/iotlab.png?image=7" alt="">--}}
-            {{--            <img class="w-48 self-center" src="startups/iraq3d.png?image=8" alt="">--}}
-            {{--            <img class="w-32 self-center" src="startups/LAMMA.png?image=9" alt="">--}}
-            {{--            <img class="w-24 self-center" src="startups/isin.png?image=10" alt="">--}}
-            {{--            <img class="w-48 self-center" src="startups/makerchi.png?image=11" alt="">--}}
-            {{--            <img class="w-32 self-center" src="startups/online.png?image=12" alt="">--}}
-            {{--            <img class="w-48 self-center" src="startups/project1.png?image=13" alt="">--}}
-            {{--            <img class="w-48 self-center" src="startups/simple.png?image=14" alt="">--}}
-            {{--            <img class="w-44 self-center" src="startups/vada.png?image=15" alt="">--}}
-
-            {{--        </div>--}}
-            {{--    </div>--}}
-
         </div>
 
         <div class="flex flex-wrap justify-center bgbyellow opacity-90">
