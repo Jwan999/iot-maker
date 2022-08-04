@@ -81,6 +81,7 @@
                 }
             }
 
+
         },
         mounted() {
             this.getStartups();
