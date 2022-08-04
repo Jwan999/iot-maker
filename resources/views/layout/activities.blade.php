@@ -8,7 +8,7 @@
 
 {{--    <div class="flex flex-col lg:w-10/12 w-full m-4">--}}
 
-{{--        <img class="lg:w-9/12 w-full self-center lg:-ml-52 -ml-0" src="newImages/makercamp.png" alt="">--}}
+{{--        <img class="lg:w-9/12 w-full self-center lg:-ml-52 -ml-0" src="images/makercamp.png" alt="">--}}
 
 {{--        <div--}}
 {{--            class="lg:w-10/12 w-full p-4 bg-blue lg:-mt-20 -mt-10 lg:ml-72 ml-0 dark:opacity-90 bg-opacity-60 rounded self-center">--}}
@@ -28,7 +28,7 @@
 
 {{--    <div class="flex flex-col lg:w-11/12 w-full m-4">--}}
 
-{{--        <img class="lg:w-8/12 w-11/12 self-center lg:-mr-80 -ml-0" src="newImages/innovationdat.png" alt="">--}}
+{{--        <img class="lg:w-8/12 w-11/12 self-center lg:-mr-80 -ml-0" src="images/innovationdat.png" alt="">--}}
 
 {{--        <div class="lg:w-8/12 w-full p-4 bg-black lg:-mt-20 -mt-10 lg:ml-24 ml-0 opacity-90 rounded">--}}
 {{--            <h1 class="text-white lg:text-4xl text-xl">--}}
@@ -47,7 +47,7 @@
 
 {{--    <div class="flex flex-col lg:w-10/12 w-full m-4">--}}
 
-{{--        <img class="lg:w-9/12 w-full self-center lg:-ml-52 -ml-0" src="newImages/3d.png" alt="">--}}
+{{--        <img class="lg:w-9/12 w-full self-center lg:-ml-52 -ml-0" src="images/3d.png" alt="">--}}
 
 {{--        <div--}}
 {{--            class="lg:w-10/12 w-full p-4 bg-black lg:-mt-20 -mt-10 lg:ml-72 ml-0 opacity-90 rounded self-center">--}}

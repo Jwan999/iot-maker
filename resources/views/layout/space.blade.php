@@ -8,13 +8,13 @@
 
     <div class="grid grid-rows-3">
         <div class="w-full">
-            <img src="../../../public/newImages/co-work.png" alt="">
+            <img src="../../../public/images/co-work.png" alt="">
         </div>
         <div class="flex justify-center lg:mt-20 mt-5">
-            <img class="lg:w-8/12 w-9/12" src="../../../public/newImages/training_halls.png" alt="">
+            <img class="lg:w-8/12 w-9/12" src="../../../public/images/training_halls.png" alt="">
         </div>
         <div class="w-full lg:mt-32 mt-10">
-            <img src="../../../public/newImages/makerspace.png" alt="">
+            <img src="../../../public/images/makerspace.png" alt="">
         </div>
     </div>
 

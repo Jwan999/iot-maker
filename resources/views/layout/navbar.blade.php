@@ -48,7 +48,7 @@
 
         <button @click="darkMode = !darkMode; toggleStartupsBg()" onclick="toggleDarkMode()"
                 class="text-lg hover:text-white hover:shadow-2xl lg:ml-6 ml-0 lg:mt-0 mt-6 modeToggle">
-            <img class="w-12 h-12" :src="darkMode ? 'newImages/lightMode.svg' : 'newImages/darkMode.svg'" alt="">
+            <img class="w-12 h-12" :src="darkMode ? 'images/lightMode.svg' : 'images/darkMode.svg'" alt="">
         </button>
     </div>
 

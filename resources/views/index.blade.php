@@ -9,7 +9,7 @@
     <link href="/fonts/avantgarde-bk-bt/avantgarde.css" rel="stylesheet">
     <meta name="yandex-verification" content="0ad382af5a348276"/>
     <link rel="stylesheet" href="/css/stylesheet.css">
-    <link rel="icon" href="../../public/newImages/IoTLogo.png">
+    <link rel="icon" href="../../public/images/IoTLogo.png">
 
     <title>IoT Maker</title>
 
@@ -72,7 +72,8 @@
             openProjects() {
                 this.projects = true
             },
-            toggleStartupsBg(){
+            // todo toggle startups background color
+            toggleStartupsBg() {
                 if (this.darkMode) {
                     console.log(this.darkMode)
                     document.documentElement.style.setProperty("--bg-gray", "E5E5E5");
