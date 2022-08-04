@@ -9,7 +9,7 @@ body {
 }
 
 .bg-startups {
-    background-image: url("/images/img.png");
+    background-image: url("/newImages/img.png");
     /*object-fit: scale-down;*/
     /*object-fit: cover;*/
     /*background-attachment: fixed;*/
@@ -48,7 +48,7 @@ html, body {
 }
 
 .bg-tools {
-    background-image: url("/images/bgtools-lighterBottom.png");
+    background-image: url("/newImages/bgtools-lighterBottom.png");
     object-fit: scale-down;
     /*background-color: var(--bg-gray);*/
     /*--tw-bg-opacity: 0.3;*/

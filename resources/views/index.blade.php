@@ -9,7 +9,7 @@
     <link href="/fonts/avantgarde-bk-bt/avantgarde.css" rel="stylesheet">
     <meta name="yandex-verification" content="0ad382af5a348276"/>
     <link rel="stylesheet" href="/css/stylesheet.css">
-    <link rel="icon" href="images/IoTLogo.png">
+    <link rel="icon" href="../../public/newImages/IoTLogo.png">
 
     <title>IoT Maker</title>
 

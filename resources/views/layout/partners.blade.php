@@ -8,7 +8,7 @@
         <div
             class="flex justify-center items-center dark:bg-gray-100 bg-gray-300 p-12 mb-6 rounded opacity-85 w-full">
             <div class="lg:w-4/12 w-10/12">
-                <img src="images/giz%20copy.png" alt="">
+                <img src="../../../public/newImages/giz%20copy.png" alt="">
             </div>
 
         </div>
