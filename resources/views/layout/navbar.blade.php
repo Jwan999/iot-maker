@@ -1,7 +1,7 @@
 <div
-    class="flex z-10 lg:flex-row flex-col justify-between my-4 lg:mx-4 mx-2 py-6 px-4 rounded bg-white bg-opacity-10 text-gray-200">
-    <div class="flex items-center justify-between text-white">
-        <a href="/" class=" text-white font-bold text-xl">
+    class="flex z-10 lg:flex-row flex-col justify-between mb-4 lg:mx-4 mx-2 py-6 px-4 rounded bg-white bg-opacity-10 text-gray-200">
+    <div class="flex items-center justify-between dark:text-white">
+        <a href="/" class="text-white font-bold text-xl">
             IoT Maker
         </a>
         <div @click="toggleNavbar()" class="lg:hidden flex">
@@ -25,7 +25,8 @@
             {{--               class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">Our--}}
             {{--                Projects</a>--}}
             <a href="#offers"
-               class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">What We
+               class="scrollactive-item text-lg w-full lg:w-auto dark:hover:text-white hover:text-gray-700 hover:shadow-2xl">What
+                We
                 Offer</a>
             <a href="#space"
                class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">
@@ -44,6 +45,11 @@
         <a href="/community"
            class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl lg:ml-6 ml-0 lg:mt-0 mt-6">
             Community</a>
+
+        <button @click="darkMode = !darkMode; toggleStartupsBg()" onclick="toggleDarkMode()"
+                class="text-lg hover:text-white hover:shadow-2xl lg:ml-6 ml-0 lg:mt-0 mt-6 modeToggle">
+            <img class="w-12 h-12" :src="darkMode ? 'images/lightMode.svg' : 'images/darkMode.svg'" alt="">
+        </button>
     </div>
 
 </div>

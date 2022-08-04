@@ -1,9 +1,10 @@
-<div class="flex w-10/12 flex-col text-white p-3">
+<div class="flex w-10/12 flex-col text-white p-3 lg:mb-10 mb-44" :class="darkMode ? 'dark' : ' ' ">
 
-    <div v-show="projects == false" class="w-8/12 xl:mt-72 mt-20 xl:mb-32 mb-0 xl:ml-14 ml-0 content-desktop">
+    <div class="w-8/12 xl:mt-64 mt-20 xl:pb-32 pb-0 xl:ml-14 ml-0 content-desktop">
         <img src="/images/sloganwhite.png" alt="">
     </div>
-    <div :class="showNavbar ? 'mt-10' : 'mt-20' " v-show="projects == false"
+
+    <div :class="showNavbar ? 'mt-10' : 'mt-20' "
          class="xl:mt-72  xl:ml-14 ml-0 content-mobile w-full">
         <img class="mt-14 w-11/12" src="/images/makeyour.png" alt="">
         <img class="mt-2 w-8/12" src="/images/passion.png" alt="">

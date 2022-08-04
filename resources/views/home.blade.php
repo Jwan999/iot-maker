@@ -1,7 +1,7 @@
 @extends('index')
 @section('content')
 
-    <div class="flex bg-tools lg:bg-contain bg-no-repeat">
+    <div class="flex bg-tools lg:bg-contain bg-no-repeat dark:bg-black" :class="darkMode ? 'dark' : ' ' " >
         {{--gear animation--}}
         <div
             class="absolute right-0 top-0 lg:-me-36 lg:-mt-2 lg:w-4/12 md:w-6/12 w-8/12 lg:-mt-20  md:-mt-20 -mt-10 -me-20">
@@ -34,7 +34,7 @@
 
 
             {{--footer--}}
-            <div class="flex flex-wrap justify-center bgbyellow opacity-90 mt-32">
+            <div class="flex flex-wrap justify-center bg-orange opacity-90 mt-32">
                 <div class="w-full p-4">
                     <h1 class="text-white tracking-wide">
                         IoT Maker 2020

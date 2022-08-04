@@ -14,7 +14,8 @@
     <title>IoT Maker</title>
 
 </head>
-<body class="bg-shade-black max-w-full">
+
+<body class="max-w-full bg-white dark:bg-black">
 
 <div id="app" v-cloak>
 
@@ -41,6 +42,7 @@
             internsCount: 0,
             productsCount: 0,
             startupsCount: 0,
+            darkMode: false,
         },
         methods: {
             getNumbers() {
@@ -57,9 +59,10 @@
             getStartups() {
                 axios.get('https://iotmaker.makershive.org/api/startups').then(response => {
                     this.startups = response.data
-                    console.log(this.startups)
+                    // console.log(this.startups)
                 })
             },
+
             toggleNavbar() {
                 this.showNavbar = !this.showNavbar
             },
@@ -69,12 +72,38 @@
             openProjects() {
                 this.projects = true
             },
+            toggleStartupsBg(){
+                if (this.darkMode) {
+                    console.log(this.darkMode)
+                    document.documentElement.style.setProperty("--bg-gray", "E5E5E5");
+                } else if (!this.darkMode) {
+                    document.documentElement.style.setProperty("--bg-gray", "000000");
+                }
+            }
+
         },
         mounted() {
             this.getStartups();
             this.getNumbers()
         }
     })
+
+</script>
+<script>
+    const darkMode = document.querySelector(".modeToggle");
+    const html = document.querySelector("html");
+
+
+    function toggleDarkMode() {
+        html.classList.toggle("dark")
+
+
+        // document.timeline.style.setProperty("--bg-color", "#E5E5E5")
+        // --bg-color: ;
+        /*#000000*/
+        // mode ? darkMode.classList.add("modeToggle") : darkMode.classList.remove("modeToggle");
+
+    }
 
 </script>
 
