@@ -1,5 +1,5 @@
 <div
-    class="flex z-10 lg:flex-row flex-col justify-between mb-4 lg:mx-4 mx-2 py-6 px-4 rounded bg-white bg-opacity-10 text-gray-200">
+    class="flex z-10 lg:flex-row flex-col justify-between mb-4 lg:mx-4 mx-2 p-3 px-4 rounded bg-white bg-opacity-10 text-gray-200 mt-4">
     <div class="flex items-center justify-between dark:text-white">
         <a href="/" class="text-white font-bold text-xl">
             IoT Maker
@@ -17,7 +17,12 @@
         </div>
     </div>
     <div :class="showNavbar ? '' :'lg:flex hidden'" class="flex flex-wrap items-center lg:mt-0 mt-6">
-        <scrollactive class="flex flex-wrap items-center lg:space-y-0 space-y-6 lg:space-x-6 space-x-0"
+
+        <a v-if="url.includes('projects') || url.includes('community')" href="/"
+           class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl lg:ml-6 ml-0 lg:mt-0 mt-6">
+            Main</a>
+
+        <scrollactive v-else class="flex flex-wrap items-center lg:space-y-0 space-y-6 lg:space-x-6 space-x-0"
                       active-class="active" :offset="200"
                       :duration="800"
                       bezier-easing-value=".5,0,.35,1">
@@ -25,7 +30,7 @@
             {{--               class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">Our--}}
             {{--                Projects</a>--}}
             <a href="#offers"
-               class="scrollactive-item text-lg w-full lg:w-auto dark:hover:text-white hover:text-gray-700 hover:shadow-2xl">What
+               class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl">What
                 We
                 Offer</a>
             <a href="#space"
@@ -42,9 +47,15 @@
 
         </scrollactive>
 
+
+        <a href="/projects"
+           class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl lg:ml-6 ml-0 lg:mt-0 mt-6">
+            Projects</a>
+
         <a href="/community"
            class="scrollactive-item text-lg w-full lg:w-auto hover:text-white hover:shadow-2xl lg:ml-6 ml-0 lg:mt-0 mt-6">
             Community</a>
+
 
         <button @click="darkMode = !darkMode; toggleStartupsBg()" onclick="toggleDarkMode()"
                 class="text-lg hover:text-white hover:shadow-2xl lg:ml-6 ml-0 lg:mt-0 mt-6 modeToggle">

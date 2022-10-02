@@ -1,9 +1,9 @@
-<div id="space" class="space flex lg:mx-10 flex-wrap justify-center pt-32 p-4 bg-gray-100 dark:bg-black" :class="darkMode ? 'dark' : ' ' ">
+<div id="space" class="space flex lg:mx-10 flex-wrap justify-center pt-32 p-4" :class="darkMode ? 'dark' : ' ' ">
     <div class="w-full text-center lg:mb-32 mb-20">
-        <h1 class="dark:text-white text-trueBlack text-4xl tracking-wide ">
+        <h1 class="dark:text-white text-trueBlack text-4xl tracking-wide underline decoration-blue-500">
             Our Space
         </h1>
-        <h1 class="text-center text-orange mt-4">Where every detail has a story.</h1>
+        <h1 class="text-center font-bold text-orange mt-4">Where every detail has a story.</h1>
     </div>
 
     <div class="grid grid-rows-3">

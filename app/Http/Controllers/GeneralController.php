@@ -21,9 +21,15 @@ class GeneralController extends Controller
     {
         return view('home');
     }
+
     public function showStartups()
     {
         return view('startups');
+    }
+
+    public function showProjects()
+    {
+        return view('projects');
     }
 
     /**

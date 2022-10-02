@@ -5,17 +5,18 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="/css/app.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    {{--    <script src="https://cdn.tailwindcss.com"></script>--}}
     <link href="/fonts/avantgarde-bk-bt/avantgarde.css" rel="stylesheet">
     <meta name="yandex-verification" content="0ad382af5a348276"/>
     <link rel="stylesheet" href="/css/stylesheet.css">
-    <link rel="icon" href="../../public/images/IoTLogo.png">
+    <link rel="icon" href="images/IoTLogo.png">
 
     <title>IoT Maker</title>
 
 </head>
 
-<body class="max-w-full bg-white dark:bg-black">
+<body class="max-w-full bg-gray-100 dark:bg-black">
 
 <div id="app" v-cloak>
 
@@ -33,9 +34,12 @@
     var vue = new Vue({
         el: '#app',
         data: {
+            projects: [],
             startups: [],
+            url: window.location.href,
             isOpen: false,
             projects: false,
+            openedProjects: [],
             showNavbar: false,
             trainingsCount: 0,
             studentsCount: 0,
@@ -55,7 +59,19 @@
                     // console.log(response.data)
                 })
             },
-
+            getProjects() {
+                axios.get('https://iotmaker.makershive.org/api/projects').then(response => {
+                    this.projects = response.data
+                    // console.log(this.startups)
+                })
+            },
+            showProjectOverview(projectName) {
+                if (this.openedProjects.includes(projectName)) {
+                    this.openedProjects.slice(indexOf(projectName), 1)
+                } else {
+                    this.openedProjects.push(projectName)
+                }
+            },
             getStartups() {
                 axios.get('https://iotmaker.makershive.org/api/startups').then(response => {
                     this.startups = response.data
@@ -82,7 +98,6 @@
                 }
             }
 
-
         },
         mounted() {
             this.getStartups();
@@ -98,7 +113,6 @@
 
     function toggleDarkMode() {
         html.classList.toggle("dark")
-
 
         // document.timeline.style.setProperty("--bg-color", "#E5E5E5")
         // --bg-color: ;

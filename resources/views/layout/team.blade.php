@@ -1,9 +1,9 @@
-<div id="team" class="team flex flex-wrap justify-center pt-32 pb-32 bg-gray-100 dark:bg-black" :class="darkMode ? 'dark' : ' ' ">
+<div id="team" class="team flex flex-wrap justify-center pt-32 pb-32" :class="darkMode ? 'dark' : ' ' ">
     <div class="w-full text-center lg:mb-32 mb-24">
         <h1 class="dark:text-white text-text-trueBlack text-4xl tracking-wide">
             Team
         </h1>
-        <h1 class="text-center text-orange mt-4">People behind IoT Maker</h1>
+        <h1 class="text-center font-bold text-orange mt-4">People behind IoT Maker</h1>
 
     </div>
     <div
