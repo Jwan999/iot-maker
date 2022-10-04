@@ -17,6 +17,10 @@
         .w-16 {
             width: 4rem;
         }
+        .my-6{
+            margin-top: 1.5rem; /* 24px */
+            margin-bottom: 1.5rem; /* 24px */
+        }
     </style>
 </head>
 
