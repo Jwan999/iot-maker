@@ -34,7 +34,7 @@
     var vue = new Vue({
         el: '#app',
         data: {
-            projects: [],
+            projectsAccomplished: [],
             startups: [],
             url: window.location.href,
             isOpen: false,
@@ -61,13 +61,13 @@
             },
             getProjects() {
                 axios.get('https://iotmaker.makershive.org/api/projects').then(response => {
-                    this.projects = response.data
+                    this.projectsAccomplished = response.data
                     // console.log(this.startups)
                 })
             },
             showProjectOverview(projectName) {
                 if (this.openedProjects.includes(projectName)) {
-                    this.openedProjects.slice(indexOf(projectName), 1)
+                    this.openedProjects.splice(this.openedProjects.indexOf(projectName), 1)
                 } else {
                     this.openedProjects.push(projectName)
                 }
@@ -101,7 +101,8 @@
         },
         mounted() {
             this.getStartups();
-            this.getNumbers()
+            this.getNumbers();
+            this.getProjects();
         }
     })
 

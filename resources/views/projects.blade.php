@@ -17,19 +17,27 @@
     <div id="projects" class="dark:bg-black grid lg:grid-cols-3 grid-cols-1 gap-10 justify-content-center lg:px-20 px-4"
          :class="darkMode ? 'dark' : ' ' ">
 
-        <div @click="showProjectOverview(project.name)" v-for="project in projects"
-             class="dark:bg-trueBlack bg-white dark:text-white p-6 flex flex-wrap items-center lg:justify-between justify-start rounded shadow-lg space-x-14 w-full">
-            <div>
-                <img class="w-24" :src="'/storage/'+ project.icon" alt="">
+        <div v-for="project in projectsAccomplished">
+            <div @click="showProjectOverview(project.name)"
+                 class="dark:bg-trueBlack bg-white dark:text-white p-6 rounded shadow-lg w-full">
+                <div class="flex flex-wrap items-center space-x-10">
+                    <div>
+                        <img class="w-16" :src="'http://iotmaker.makershive.org/storage/'+ project.icon" alt="">
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-lg">
+                            @{{ project.name }}
+                        </h1>
+                    </div>
+                </div>
+                <div>
+                    <hr class="my-6" v-show="openedProjects.includes(project.name)">
+                    <p v-show="openedProjects.includes(project.name)"
+                       class="text-justify transition-[max-height] duration-500">
+                        @{{ project.overview }}
+                    </p>
+                </div>
             </div>
-            <div>
-                <h1 class="font-bold text-lg">
-                    @{{ project.name }}
-                </h1>
-            </div>
-            <p v-show="openedProjects.includes(project.name)" class="text-justify transition-[max-height] duration-500">
-                @{{ project.overview }}
-            </p>
 
         </div>
 
