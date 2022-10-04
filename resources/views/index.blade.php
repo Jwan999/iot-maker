@@ -13,7 +13,11 @@
     <link rel="icon" href="images/IoTLogo.png">
 
     <title>IoT Maker</title>
-
+    <style>
+        .w-16 {
+            width: 4rem;
+        }
+    </style>
 </head>
 
 <body class="max-w-full bg-gray-100 dark:bg-black">

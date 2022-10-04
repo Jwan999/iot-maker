@@ -21,7 +21,7 @@
             <div @click="showProjectOverview(project.name)"
                  class="dark:bg-trueBlack bg-white dark:text-white p-6 rounded shadow-lg w-full">
                 <div class="flex flex-wrap items-center space-x-10">
-                    <div class="w-[4rem]">
+                    <div class="w-16">
                         <img :src="'http://iotmaker.makershive.org/storage/'+ project.icon" alt="">
                     </div>
                     <div>
