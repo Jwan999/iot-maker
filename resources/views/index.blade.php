@@ -14,6 +14,7 @@
 
     <title>IoT Maker</title>
     <style>
+        /*todo for some reason those tailwindcss classes don't work on the server unless i add them manully*/
         .w-16 {
             width: 4rem;
         }

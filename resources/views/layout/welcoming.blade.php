@@ -14,7 +14,7 @@
         <p class="xl:mt-6 mt-10 text-orange rounded inline-block xl:bg-white xl:bg-opacity-10 font-bold xl:px-8 xl:py-2 px-2 py-1">
             IoT Maker is a space for growth and development, you can check out our exclusive trainings right
             <a class="text-orange hover:text-white underline underline-offset-1 underline-orange-500"
-               href="https://opportunities.iotmaker.org/">here</a></p>
+               href="https://linktree.iotmaker.org/">here</a></p>
     </div>
 
 
