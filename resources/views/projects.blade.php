@@ -1,12 +1,13 @@
 @extends('index')
 @section('content')
 
-    <div class="bg-startups object-cover bg-fixed bg-no-repeat mb-24 pt-4">
+    <div class="bg-projects bg-cover bg-center bg-no-repeat mb-24 pt-4">
         @include('layout.navbar')
 
         <div class="flex justify-center">
             <div class="text-center text-white my-32 lg:w-6/12 w-10/12">
-                <h1 class="text-3xl mb-6 text-orange font-bold">Projects Accomplished
+                <h1 class="text-3xl mb-6 text-orange font-bold">
+                    Projects Accomplished
                 </h1>
 
             </div>
@@ -30,10 +31,13 @@
                         </h1>
                     </div>
                 </div>
-                <div>
-                    <hr class="my-6" v-show="openedProjects.includes(project.name)">
-                    <p v-show="openedProjects.includes(project.name)"
-                       class="text-justify transition-[max-height] duration-500">
+                <div v-show="openedProjects.includes(project.name)">
+                    <hr class="my-6">
+                    <h1 class="text-orange font-bold text-sm my-2">Sponsored by: @{{ project.sponsored_by }}</h1>
+                    <h1 class="text-gray-700 text-sm my-2">@{{ new Date(project.starting_date).getFullYear() }} (@{{
+                        project.duration }} Months)</h1>
+
+                    <p class="text-justify transition-[max-height] duration-500">
                         @{{ project.overview }}
                     </p>
                 </div>

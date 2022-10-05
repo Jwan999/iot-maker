@@ -13,8 +13,18 @@ body {
     /*object-fit: scale-down;*/
     /*object-fit: cover;*/
     /*background-attachment: fixed;*/
-    background-position: center;
-    background-size: cover;
+    /*background-position: center;*/
+    /*background-size: cover;*/
+    object-fit: scale-down;
+}
+
+.bg-projects {
+    background-image: url("/images/projects.png");
+    /*object-fit: scale-down;*/
+    /*object-fit: cover;*/
+    /*background-attachment: fixed;*/
+    /*background-position: center;*/
+    /*background-size: cover;*/
     object-fit: scale-down;
 }
 
