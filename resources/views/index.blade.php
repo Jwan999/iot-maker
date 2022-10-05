@@ -9,7 +9,7 @@
     {{--    <script src="https://cdn.tailwindcss.com"></script>--}}
     <link href="/fonts/avantgarde-bk-bt/avantgarde.css" rel="stylesheet">
     <meta name="yandex-verification" content="0ad382af5a348276"/>
-    <link rel="stylesheet" href="/css/stylesheet.css">
+    <link rel="stylesheet" href="/css/stylesheet.css?v=1">
     <link rel="icon" href="images/IoTLogo.png">
 
     <title>IoT Maker</title>
