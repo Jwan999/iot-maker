@@ -1,7 +1,7 @@
 @extends('index')
 @section('content')
 
-    <div class="bg-projects bg-cover bg-center bg-no-repeat mb-24 pt-4">
+    <div class="bg-projects bg-cover bg-center bg-fixed bg-no-repeat mb-24 pt-4">
         @include('layout.navbar')
 {{--        <img src="/images/projects.png" alt="">--}}
         <div class="flex justify-center">
