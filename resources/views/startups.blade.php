@@ -6,7 +6,7 @@
 
 
         <div id="startup">
-            <div class="bg-startups bg-cover bg-center bg-fixed bg-no-repeat mb-24 pt-4">
+            <div class="bg-startups bg-cover bg-center bg-no-repeat mb-24 pt-4">
                 @include('layout.navbar')
 
                 <div class="flex justify-center">
