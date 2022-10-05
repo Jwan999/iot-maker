@@ -3,7 +3,7 @@
 
     <div class="bg-projects bg-cover bg-center bg-no-repeat mb-24 pt-4">
         @include('layout.navbar')
-
+        <img src="/images/projects.png" alt="">
         <div class="flex justify-center">
             <div class="text-center text-white my-32 lg:w-6/12 w-10/12">
                 <h1 class="text-3xl mb-6 text-orange font-bold">
